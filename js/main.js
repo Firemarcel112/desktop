@@ -44,19 +44,33 @@ function closeApp() {
 /*check installed */
 
 function appInstalled() {
+
     if(localStorage.getItem("browser") !== "installiert") {
         document.querySelector("#app_browser_").style.display = "none";
     } else {
-        document.querySelector("#app_browser_").style.diesplay = "unset";
+        document.querySelector("#app_browser_").style.display = "block";
+    }
+
+    if(localStorage.getItem("app_number") !== "installiert") {
+        document.querySelector("#app_number_").style.display = "none";
+    } else {
+        document.querySelector("#app_number_").style.display = "block";
     }
 }
 
 function menuAppInstalled() {
+
     if(localStorage.getItem("browser") !== "installiert") {
         document.querySelector("#menu_browser_").style.display = "none";
     } else {
-        document.querySelector("#menu_browser_").style.diesplay = "unset";
-    }   
+        document.querySelector("#menu_browser_").style.display = "block";
+    }
+    
+    if(localStorage.getItem("app_number") !== "installiert") {
+        document.querySelector("#menu_app_number_").style.display = "none";
+    } else {
+        document.querySelector("#menu_app_number_").style.display = "block";
+    }
 }
 
 function isBrowserInstalled() {
@@ -66,4 +80,11 @@ function isBrowserInstalled() {
         window.location = "/../desktop";
     } else {}
 
+}
+
+function isAppNumberInstalled() {
+    if(localStorage.getItem("app_number") !== "installiert") {
+        document.querySelector("body").style.display = "none";
+        alert("Du hast die App nicht installiert, gehe in den App Store")
+    } else {};
 }

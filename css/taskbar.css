@@ -61,7 +61,13 @@ footer #bildschirm:hover {
     background-color: rgb(37, 37, 37);
     top: 530px;
     width: 300px;
+    max-height: 500px;
     height: 500px;
+}
+
+#appleiste {
+    overflow-x: none;
+    max-height: 500px;
 }
 
 .m_app_hover {
@@ -89,11 +95,11 @@ a {
 
 .m_app_desc {
     font-size: 20px;
-    width: 90px;
+    width: 200px;
     height: auto;
     position: relative;
     top: -40px;
-    left: 100px;
+    left: 80px;
     color: black;
     text-shadow: 1px 1px;
 }
@@ -101,12 +107,12 @@ a {
 #abmelden {
     position: relative;
     color: white;
-    top: 470px;
+    top: 478px;
     bottom: 0px;
     margin-bottom: 0px;
     line-height: 0;
     font-family: Helvetica;
-    left: 225px;
+    left: 210px;
     cursor: pointer;
 }
 
@@ -116,13 +122,19 @@ a {
 
 
 #profilbild {
+    z-index: 1;
     position: absolute;
+    background-color: rgb(37, 37, 37);
     width: 40px;
     height: 40px;
     border-radius: 50%;
 }
 
 #username {
+    z-index: 1;
+    background-color: rgb(37, 37, 37);
+    width: 238px;
+    height: 50px;
     position: absolute;
     left: 45px;
     font-size: 20px;

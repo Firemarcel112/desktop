@@ -125,6 +125,15 @@ function isInstalled() {
         browser.style.display = "unset";
         uninstall.style.display = "unset";
     }
+
+    if(localStorage.getItem("app_number") == "installiert") {
+
+        const app_number = document.querySelector("#app_number");
+        const uninstall = document.querySelector("#uninstall_number");
+       
+        app_number.style.display = "unset";
+        uninstall.style.display = "unset";
+    }
 }
 
 function uninstallBrowser() {
@@ -137,4 +146,15 @@ function uninstallBrowser() {
         window.location.reload()
     }
 
+}
+
+function uninstallAppNumber() {
+    if(localStorage.getItem("app_number") !== "installiert") {
+        alert("Fehler aufgetreten");
+        window.location.reload();
+    } else {
+        localStorage.removeItem("app_number");
+        alert("App Nummer erraten erfolgreich deinstalliert");
+        window.location.reload();
+    }
 }

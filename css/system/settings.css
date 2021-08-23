@@ -122,6 +122,8 @@ input {
 }
 
 #browser,
-#uninstall_browser {
+#uninstall_browser,
+#app_number,
+#uninstall_number {
     display: none;
 }
