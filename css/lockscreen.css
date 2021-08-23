@@ -110,4 +110,16 @@ input {
     background-color: blue;
 }
 
+.fa-eye , .fa-eye-slash {
+    position: absolute;
+    top: 568px;
+    left: 1085px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.fa-eye-slash {
+    display: none;
+}
+
 /*New Passwort*/

@@ -127,3 +127,23 @@ function date() {
 function backToLockscreen() {
     window.location = "/../";
 }
+
+function seePassword() {
+    const passwordForm = document.querySelector("#password");
+    const eye = document.querySelector(".fa-eye");
+    const hideeye = document.querySelector(".fa-eye-slash");
+
+    passwordForm.type = "text";
+    eye.style.display = "none";
+    hideeye.style.display = "unset";
+}
+
+function hidePassword() {
+    const passwordForm = document.querySelector("#password");
+    const eye = document.querySelector(".fa-eye");
+    const hideeye = document.querySelector(".fa-eye-slash");
+
+    passwordForm.type = "password";
+    eye.style.display = "unset";
+    hideeye.style.display = "none";
+}
