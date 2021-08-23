@@ -16,12 +16,13 @@
         <p id="close" onclick="closeApp()" id="close">X<span id="tooltip">Schließen</span></p>
         <div id="sidebar">
             <a onclick="openAllgemeines()" id="allgemein"><img src="/../standardbilder/apps/settings.png"><span id="allgemein_d">Allgemeines</span></a>
+            <a onclick="openApps()" id="installiert"><img src="/../standardbilder/apps/apps.png"><span id="apps_d">Apps</span></a>
         </div>
 
         <div id="welcome">
             <div class="container">
                 <img id="s_profilbild">
-                <h2 id="name">NAME</h2>
+                <h2 id="name"></h2>
             </div>
         </div>
 
@@ -78,6 +79,20 @@
             </div>
         </div>
 
+        <div id="installed">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <a id="browser"><img class="appimg" src="/../standardbilder/apps/browser.png"><p class="app_desc">Browser</p></a>
+                    </div>
+                    <div class="col">
+                        <input id="uninstall_browser" onclick="uninstallBrowser()" class="btn btn-primary" type="submit" value="Browser deinstallieren">
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div id="menu">
             <img id="profilbild">
             <p id="username"></p>
@@ -116,6 +131,7 @@
                 window.setTimeout("menuApps()" , 1);
                 window.setTimeout("themeMenu()" , 1);
                 window.setTimeout("menuAppInstalled()" , 1);
+                window.setTimeout("isInstalled()" , 1);
             </script>
         </footer>
     </body>
