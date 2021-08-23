@@ -1,0 +1,120 @@
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    background-color: grey;
+}
+
+#start {
+    position: relative;
+    top: -2px;
+}
+
+#start img {
+    margin: 0;
+    padding: 0;
+    height: 50px;
+}
+
+#start:hover {
+    opacity: 0.5;
+}
+
+
+footer p {
+    display: inline;
+}
+
+footer #task_time {
+    position: relative;
+    top: -5px;
+    left: 1770px;
+}
+
+footer #task_date {
+    position: relative;
+    top: 10px;
+    left: 1700px;
+}
+
+footer #bildschirm {
+    position: absolute;
+    display: block;
+    top: 0;
+    right: 0;
+    height: 50px !important;
+    width: 8px;
+    border-left: 2px solid white;
+}
+
+footer #bildschirm:hover {
+    background-color: rgb(48, 48, 48);
+    opacity: .5;
+}
+
+/*MENU is not in Footer*/ 
+#menu {
+    position: absolute;
+    display: none;
+    background-color: rgb(37, 37, 37);
+    top: 530px;
+    width: 300px;
+    height: 500px;
+}
+
+.m_app_hover {
+    position: absolute;
+    top: 50px;
+    left: 5px;
+    width: 290px;
+    height: 60px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+
+.m_app_hover:hover {
+    border: 1px solid rgb(72, 72, 255);
+}
+
+.m_appimg {
+    width: 50px;
+    height: 50px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.m_app_desc {
+    font-size: 20px;
+    width: 90px;
+    height: auto;
+    position: relative;
+    top: -40px;
+    left: 100px;
+    color: black;
+    text-shadow: 1px 1px;
+}
+
+#abmelden {
+    position: relative;
+    color: white;
+    top: 95%;
+    font-family: Helvetica;
+    left: 225px;
+    cursor: pointer;
+}
+
+#abmelden:hover {
+    color: red;
+}
+
+
+#profilbild {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}

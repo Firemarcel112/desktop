@@ -1,0 +1,122 @@
+body {
+    background-color: rgb(78, 78, 78) !important;
+    max-width: 1903px;
+    max-height: 1080px;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+h1 {
+    background-color: black;
+    width: 1925px;
+    color: white;
+    height: 55px;
+    display: inline-block;
+}
+
+#close {
+    position: absolute;
+    font-size: 45px;
+    cursor: pointer;
+    color: green;
+    top: -5px;
+    left: 98%;
+}
+
+#tooltip {
+    display: none;
+    position: absolute;
+    color: red;
+    font-size: 20px;
+    left: -100px;
+    top: 20px;
+}
+
+#close:hover > #tooltip {
+    display: inherit;
+}
+
+#close:hover {
+    color: red;
+}
+
+/* SIDEBAR */
+
+#sidebar {
+    position: absolute;
+    top: 55.4px;
+    height: 980px;
+    background-color: rgb(38, 84, 235);
+    width: 80px;
+}
+
+
+#sidebar img {
+    width: 50px;
+    display: block;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+#sidebar span {
+    display: none;
+    text-align: center;
+    font-size: 14px;
+}
+
+#allgemein:hover > #allgemein_d {
+    display: inherit;
+}
+
+/**/
+
+#welcome {
+    margin: 0 auto;
+    display: block;
+}
+
+#welcome img {
+    display: block;
+    margin: 0 auto;
+    border-radius: 50%;
+}
+
+#welcome #name {
+    text-align: center;
+}
+
+#allgemeines {
+    display: none;
+}
+
+/*TEXT*/
+#changeBenutzer, 
+#changePassword, 
+#changeBackground, 
+#changeProfilbild,
+#deleteProfile {
+    font-size: 25px;
+    color: white;
+    display: inline;
+    margin-bottom: 20px;
+    line-height: 1.8 !important;
+}
+
+/*INPUTS*/
+#newname, 
+#newpassword, 
+#newBackground, 
+#newProfilbild{
+    cursor: text;
+    background-color: white;
+    color: black;
+    width: 400px;
+}
+
+#deleteprofile:hover {
+    background-color: red !important;
+}
+
+input {
+    margin-bottom: 10px;
+}

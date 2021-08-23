@@ -1,0 +1,39 @@
+body {
+    background: url("/../standardbilder/lockscreen.jpg");
+    background-color: rgb(77, 77, 255);
+    background-repeat: repeat-y !important;
+    max-width: 1903px;
+    background-size: 1920px , 1080px !important;
+    max-height: 1080px;
+    overflow-y: hidden;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+.appimg {
+    width: 90px;
+    height: 80px;
+}
+
+.app_hover {
+    width: 90px;
+    height: 110px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+
+.app_hover:hover {
+    border: 1px solid rgb(72, 72, 255);
+}
+
+.app_desc {
+    font-size: 14px;
+    width: 90px;
+    height: auto;
+    text-align: center;
+    color: black;
+    text-shadow: 1px 1px;
+}
