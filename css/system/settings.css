@@ -94,7 +94,8 @@ h1 {
 #changePassword, 
 #changeBackground, 
 #changeProfilbild,
-#deleteProfile {
+#deleteProfile, 
+#textColor {
     font-size: 25px;
     color: white;
     display: inline;
@@ -106,7 +107,7 @@ h1 {
 #newname, 
 #newpassword, 
 #newBackground, 
-#newProfilbild{
+#newProfilbild {
     cursor: text;
     background-color: white;
     color: black;

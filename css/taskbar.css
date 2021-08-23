@@ -98,6 +98,10 @@ a {
     text-shadow: 1px 1px;
 }
 
+#second_app {
+    top: 110px;
+}
+
 #abmelden {
     position: relative;
     color: white;
@@ -117,4 +121,11 @@ a {
     width: 40px;
     height: 40px;
     border-radius: 50%;
+}
+
+#username {
+    position: absolute;
+    left: 45px;
+    font-size: 20px;
+    color: white;
 }

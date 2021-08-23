@@ -70,6 +70,12 @@ function deleteProfile() {
     }
 }
 
+function changeColor() {
+    const newColor = document.querySelector("#newColor").value;
+    localStorage.setItem("appColor" , newColor);
+    window.location.reload();
+}
+
 function backToWelcome() {
     const allgemeines = document.querySelector("#allgemeines");
 

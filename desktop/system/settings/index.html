@@ -42,6 +42,9 @@
                         <p id="changeProfilbild">Profilbild ändern:</p>
                         <br>
 
+                        <p id="textColor">Apps Namen farbe ändern:</p>
+                        <br>
+
                         <p id="deleteProfile">Profil löschen:</p>
                         
                     </div>
@@ -63,6 +66,10 @@
                         <input class="btn btn-primary" onclick="changeProfilbild()" type="submit" value="Absenden">
                         <br>
 
+                        <input class="btn btn-primary" id="newColor" type="color">
+                        <input class="btn btn-primary" onclick="changeColor()" type="submit" value="Absenden">
+                        <br>
+
                         <input class="btn btn-warning" id="deleteprofile" onclick="deleteProfile()" type="submit" value="Absenden">
                         <br>
 
@@ -73,14 +80,19 @@
 
         <div id="menu">
             <img id="profilbild">
+            <p id="username"></p>
 
             <div class="m_app_hover">
-                <a id="menu_settings"><img class="m_appimg" src="/../standardbilder/apps/settings.png"><p class="m_app_desc">Einstellungen</p></a>
+                <a id="menu_settings"><img class="m_appimg" src="/../standardbilder/apps/settings.png"><p id="m_t_c" class="m_app_desc">Einstellungen</p></a>
+            </div>
+
+            <div id="second_app" class="m_app_hover">
+                <a id="menu_browser"><img class="m_appimg" src="/../standardbilder/apps/browser.png"><p id="m_t_c1" class="m_app_desc">Browser</p></a>
             </div>
 
             <a onclick="logoff()" id="abmelden">Abmelden</a>
-
         </div>
+
         <footer>
             <a onclick="_closeMenu()" ondblclick="_openMenu()" id="start"><img src="/../standardbilder/taskbar.jpg"></a>
             <p id="task_time"></p>
@@ -88,6 +100,7 @@
             <p onclick="backToDesktop()" id="bildschirm"></p>
             <script src="/../js/main.js"></script>
             <script src="/../js/system/settings.js"></script>
+            <script src="/../js/system/theme_config.js"></script>
             <script src="/../js/footer.js"></script>
             <script src="/../js/apps.js"></script>
             <script>
@@ -98,6 +111,7 @@
                 window.setTimeout("date()" , 1);
                 window.setInterval("date()" , 900000)
                 window.setTimeout("menuApps()" , 1);
+                window.setTimeout("themeMenu()" , 1);
             </script>
         </footer>
     </body>
