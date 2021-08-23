@@ -18,23 +18,30 @@
         </div>
 
         <div class="app_hover">
-            <a id="app_browser"><img  class="appimg" src="/../standardbilder/apps/browser.png"><p id="t_c1" class="app_desc">Browser</p></a>
+            <a id="systemapp_store"><img  class="appimg" src="/../standardbilder/apps/app_store.png"><p id="t_c1" class="app_desc">App Store</p></a>
+        </div>
+
+        <div id="app_browser_" class="app_hover">
+            <a id="app_browser"><img  class="appimg" src="/../standardbilder/apps/browser.png"><p id="t_c2" class="app_desc">Browser</p></a>
         </div>
 
 
         <div id="menu">
             <img id="profilbild">
             <p id="username"></p>
+            <a onclick="logoff()" id="abmelden">Abmelden</a>
 
             <div class="m_app_hover">
                 <a id="menu_settings"><img class="m_appimg" src="/../standardbilder/apps/settings.png"><p id="m_t_c" class="m_app_desc">Einstellungen</p></a>
             </div>
 
-            <div id="second_app" class="m_app_hover">
-                <a id="menu_browser"><img class="m_appimg" src="/../standardbilder/apps/browser.png"><p id="m_t_c1" class="m_app_desc">Browser</p></a>
+            <div class="m_app_hover">
+                <a id="menu_store"><img  class="m_appimg" src="/../standardbilder/apps/app_store.png"><p id="m_t_c1" class="m_app_desc">App Store</p></a>
             </div>
 
-            <a onclick="logoff()" id="abmelden">Abmelden</a>
+            <div id="menu_browser_" class="m_app_hover">
+                <a id="menu_browser"><img class="m_appimg" src="/../standardbilder/apps/browser.png"><p id="m_t_c2" class="m_app_desc">Browser</p></a>
+            </div>
         </div>
 
         <footer>
@@ -56,6 +63,8 @@
                 window.setInterval("menuApps()" , 1);
                 window.setTimeout("themeDesktop()" , 1);
                 window.setTimeout("themeMenu()" , 1);
+                window.setTimeout("appInstalled()" , 1);
+                window.setTimeout("menuAppInstalled()" , 1);
                 // BackgroundImage //
                 const backgroundImage = document.querySelector("body");
                 if(localStorage.getItem("hintergrundbild") === "noImage") {

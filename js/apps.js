@@ -4,6 +4,7 @@ const apps = {
 
     "settings": "settings",
     "browser": "browser",
+    "store": "store",
 }
 
 function desktopApps() {
@@ -13,6 +14,9 @@ function desktopApps() {
 
     const app_browser = document.querySelector("#app_browser");
     app_browser.href = apps.apps + apps.browser;
+
+    const systemapp_store = document.querySelector("#systemapp_store");
+    systemapp_store.href = apps.system + apps.store;
 }
 
 
@@ -23,4 +27,7 @@ function menuApps() {
 
     const app_browser = document.querySelector("#menu_browser");
     app_browser.href = apps.apps + apps.browser;
+
+    const systemapp_store = document.querySelector("#menu_store");
+    systemapp_store.href = apps.system + apps.store;
 }

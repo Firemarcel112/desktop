@@ -65,7 +65,7 @@ footer #bildschirm:hover {
 }
 
 .m_app_hover {
-    position: absolute;
+    position: relative;
     top: 50px;
     left: 5px;
     width: 290px;
@@ -98,14 +98,13 @@ a {
     text-shadow: 1px 1px;
 }
 
-#second_app {
-    top: 110px;
-}
-
 #abmelden {
     position: relative;
     color: white;
-    top: 95%;
+    top: 470px;
+    bottom: 0px;
+    margin-bottom: 0px;
+    line-height: 0;
     font-family: Helvetica;
     left: 225px;
     cursor: pointer;

@@ -39,3 +39,31 @@ function backToDesktop() {
 function closeApp() {
     window.location = "/../desktop/";
 }
+
+
+/*check installed */
+
+function appInstalled() {
+    if(localStorage.getItem("browser") !== "installiert") {
+        document.querySelector("#app_browser_").style.display = "none";
+    } else {
+        document.querySelector("#app_browser_").style.diesplay = "unset";
+    }
+}
+
+function menuAppInstalled() {
+    if(localStorage.getItem("browser") !== "installiert") {
+        document.querySelector("#menu_browser_").style.display = "none";
+    } else {
+        document.querySelector("#menu_browser_").style.diesplay = "unset";
+    }   
+}
+
+function isBrowserInstalled() {
+    if(localStorage.getItem("browser") !== "installiert") {
+        document.querySelector("body").style.display = "none";
+        alert("Du hast die App nicht installiert, gehe in den App Store!")
+        window.location = "/../desktop";
+    } else {}
+
+}
