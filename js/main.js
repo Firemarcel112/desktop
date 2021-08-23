@@ -35,3 +35,7 @@ function logoff() {
 function backToDesktop() {
     window.location = "/../desktop";
 }
+
+function closeApp() {
+    window.location = "/../desktop/";
+}

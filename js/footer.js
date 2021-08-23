@@ -25,7 +25,7 @@ function _openMenu() {
     const profilbild = document.querySelector("#profilbild");
     const menu = document.querySelector("#menu");
     const username = document.querySelector("#username");
-    profilbild.src = localStorage.getItem("profilbild");
+    profilbild.src = localStorage.getItem("profilbild"); 
     menu.style.display = "unset";
     username.innerHTML = localStorage.getItem("username")
 }

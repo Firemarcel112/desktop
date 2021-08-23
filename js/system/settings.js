@@ -1,7 +1,3 @@
-function closeApp() {
-    window.location = "/../desktop/";
-}
-
 function main() {
     const username = document.querySelector("#name");
     const profilbild = document.querySelector("#s_profilbild");
