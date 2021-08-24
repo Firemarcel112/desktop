@@ -1,0 +1,19 @@
+@import "/../system/v1/_system/app_design.css";
+
+.appimg {
+    width: 50px;
+    display: inline-block;
+}
+
+.app_desc {
+    position: relative;
+    top: -38px;
+    left: 60px;
+    font-size: 20px;
+}
+
+.btn-primary {
+    position: relative;
+    top: 10px;
+    margin-bottom: 50px;
+}

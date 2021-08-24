@@ -1,0 +1,189 @@
+body {
+    background: url("/../system/v1/standardbilder/lockscreen.jpg");
+    background-repeat: no-repeat;
+    max-width: 1903px;
+    max-height: 1080px;
+    overflow-y: hidden;
+}
+
+#lockimage , #lockimage_r {
+    position: relative;
+    margin: 0 auto;
+    display: block;
+    max-width: 320px;
+    max-height: 320px;
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    top: 150px;
+}
+
+#login {
+    display: none;
+}
+
+h1 {
+    position: relative;
+    text-align: center;
+    top: 160px;
+    font-weight: bolder;
+}
+
+input {
+    position: relative;
+    top: 180px;
+    padding: 10px;
+    width: 350px;
+    display: block;
+    margin: 0 auto;
+    font-weight: bolder;
+}
+
+#password , #password_new , #image_link {
+    margin-top: 10px;
+}
+
+#date {
+    position: relative;
+    top: 550px;
+    left: 1818px;
+    font-size: 25px;
+    max-width: 100px;
+    color: white;
+}
+
+#newPasswort {
+    position: absolute;
+    top: 662px;
+    left: 945px;
+    color: black;
+    font-weight: bolder;
+}
+
+#error {
+    position: absolute;
+    top: 710px;
+    left: 840px;
+    font-weight: bolder;
+    color: red;
+    text-align: center;
+}
+
+#back {
+    position: absolute;
+    top: 700px;
+    left: 1070px;
+    color: black;
+    font-weight: bolder;
+}
+
+#back:hover , #newPasswort:hover {
+    color: rgb(0, 153, 255);
+    cursor: pointer;
+}
+
+#errormessage {
+    position: absolute;
+    top: 690px;
+    left: 860px;
+    font-weight: bolder;
+    color: red;
+    text-align: center;
+}
+
+#register {
+    display: none;
+}
+
+#errormessage_register {
+    position: relative;
+    text-align: center;
+    font-weight: bolder;
+    top: 200px;
+    margin-bottom: 40px;
+    color: red;
+}
+
+#submit {
+    margin-top: 10px;
+    background-color: rgb(0, 153, 255);
+    color: white;
+}
+
+#submit:hover {
+    background-color: blue;
+}
+
+.fa-eye , .fa-eye-slash {
+    position: absolute;
+    top: 568px;
+    left: 1085px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.fa-eye-slash {
+    display: none;
+}
+
+#shutdown {
+    position: absolute;
+    top: 1040px;
+    left: 0px;
+    font-size: 40px;
+    color: white;
+}
+
+#shutdown:hover {
+    color: red;
+}
+
+#shutdown #toggle{
+    position: absolute;
+    background-color: rgb(0, 0, 0);
+    top: -20px;
+    left: 0px;
+    display: none;
+    font-size: 15px;
+    font-family: Helvetica;
+}
+
+#shutdown:hover > #toggle {
+    display: unset;
+}
+
+
+.loader {
+    display: none;
+    border: 16px solid #ffffff;
+    margin: 0 auto;
+    position: relative;
+    top: 180px;
+    border-radius: 50%;
+    border-top: 16px solid rgb(0, 145, 255);
+    border-bottom: 16px solid rgb(0, 145, 255);
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
+  
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+#anmeldennachricht {
+    display: none;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    top: 180px;
+    font-size: 50px;
+    color: white;
+}
