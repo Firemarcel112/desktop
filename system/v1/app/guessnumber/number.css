@@ -1,0 +1,30 @@
+@import "/../system/v1/_system/app_design.css";
+
+#a {
+    position: absolute;
+    margin: 0 auto;
+    text-align: center;
+    left: 300px;
+}
+
+h2{
+    color: blue;
+}
+
+#message {
+    font-weight: bolder;
+}
+
+#highscore {
+    position: relative;
+    left: 90%;
+    text-align: center;
+    border: 2px solid blue;
+    width: 180px;
+    padding: 10px;
+}
+
+#highscore p {
+    font-size: 18px;
+    font-weight: bolder;
+}

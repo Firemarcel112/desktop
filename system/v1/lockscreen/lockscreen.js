@@ -30,20 +30,42 @@ function checkLogedIn() {
 
         const forgot_form = document.querySelector("#forgot");
         forgot_form.style.display = "none";
+
+        const login_form = document.querySelector("#login");
+        login_form.style.display = "block";
     }
 }
 
 function login() {
     const password = document.querySelector("#password").value;
     if(password == localStorage.getItem("password")) {
-        alert("Hallo " + localStorage.getItem("username"));
         const angemeldet = "true";
         sessionStorage.setItem("angemeldet" , angemeldet)
-        window.location = "/../system/v1/desktop/";
+        // window.location = "/../system/v1/desktop/";
+        loginGUI()
+
     } else {
         errormessage = document.querySelector("#errormessage");
         errormessage.innerHTML = "Dein Passwort ist Falsch!"
     }
+}
+
+function weiterleitung() {
+    window.location = "/../system/v1/desktop";
+}
+
+function loginGUI() {
+    document.querySelector("#login_username").style.display = "none";
+    document.querySelector("#password").style.display = "none";
+    document.querySelector("#submit").style.display = "none";
+    document.querySelector("#errormessage").style.display = "none";
+    document.querySelector("#newPasswort").style.display = "none";
+    document.querySelector("#shutdown").style.display = "none";
+
+    document.querySelector(".loader").style.display = "block";
+    document.querySelector("#anmeldennachricht").style.display = "block";
+    document.querySelector("#anmeldennachricht").innerHTML = "Willkommen " + localStorage.getItem("username");
+    window.setTimeout("weiterleitung()" , 100);
 }
 
 function forgotPassword() {

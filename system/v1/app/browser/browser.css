@@ -1,0 +1,8 @@
+@import "/../system/v1/_system/app_design.css";
+
+iframe {
+    position: absolute;
+    top: 55px;
+    width: 1920px;
+    height: 980px;
+}

@@ -15,42 +15,45 @@
 
 <body>
    <div id="configurator">
-       <div class="container">
-           <h1>Du besitzt noch keinen PC - Erstelle dir einen</h1>
-           <h2>Wie Viel RAM möchtest du in deinem PC haben?</h2>
-           <select id="RAM">
-               <option>8 GB</option>
-               <option>16 GB</option>
-           </select>
-           <h2>Welche CPU Möchtest du Verwenden</h2>
-           <select id="CPU">
-               <option>Amd</option>
-               <option>Intel</option>
-           </select>
-           <h2>Welches Motherboard möchtest du verwenden</h2>
-           <select id="MOTHERBOARD">
-               <option>ATX</option>
-               <option>E-ATX</option>
-           </select>
-           <br>
-           <br>
-           <input onclick="system()" class="btn btn-primary" type="submit" value="Speichern">
-       </div>
-   </div>
-   <div id="startup">
-       <div class="container">
-       <input class="btn btn-primary" onclick="checkSystemVersion()" type="submit" value="PC Starten">
-       <p>Hinweis: Beim ersten Start 2 mal Drücken!</p>
-       <h2>Deine Komponenten:</h2>
-       <p id="ram"></p>
-       <p id="cpu"></p>
-       <p id="motherboard"></p>
-       </div>
-   </div>
-   <script src="/../prio_system/start.js"></script>
-   <script>
-       window.setTimeout("checkIsSystemValidFirst()" , 1);
-       window.setTimeout("isSystemStarted()" , 1);
-   </script>
-</body>
+        <div class="container">
+            <h1>Du besitzt noch keinen PC - Erstelle dir einen</h1>
+            <h2>Wie Viel RAM möchtest du in deinem PC haben?</h2>
+            <select id="RAM">
+                <option>8 GB</option>
+                <option>16 GB</option>
+            </select>
+            <h2>Welche CPU Möchtest du Verwenden</h2>
+            <select id="CPU">
+                <option>Intel</option>
+                <option>Amd</option>
+            </select>
+            <h2>Welches Motherboard möchtest du verwenden</h2>
+            <select id="MOTHERBOARD">
+                <option>ATX</option>
+                <option>E-ATX</option>
+            </select>
+            <br>
+            <br>
+            <input onclick="system()" class="btn btn-primary" type="submit" value="Speichern">
+        </div>
+    </div>
+    <div id="startup">
+        <div class="container">
+            <input class="btn btn-primary" onclick="checkSystemVersion()" type="submit" value="PC Starten">
+            <p id="hinweis">Hinweis: Beim ersten Start 2 mal Drücken!</p>
+            <h2>Deine Komponenten:</h2>
+            <p id="ram"></p>
+            <p id="cpu"></p>
+            <p id="motherboard"></p>
+        </div>
+    </div>
+    <script src="/../prio_system/start.js"></script>
+    <script>
+        window.setTimeout("checkIsSystemValidFirst()", 1)
+        window.setInterval("checkIsSystemValidFirst()" , 1000);
+        window.setTimeout("isSystemStarted()" , 1);
+
+        window.setTimeout("informationMessage()" , 1);
+    </script>
+    </body>
  </html>

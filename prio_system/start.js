@@ -88,6 +88,13 @@ function checkSystemVersion() {
     }
 }
 
+function informationMessage() {
+    if(localStorage.getItem("SYSTEM_VERSION") == "V1") {
+        const message = document.querySelector("#hinweis");
+        message.style.display = "none"
+    }
+}
+
 function isSystemStarted() {
     if(sessionStorage.getItem("Status") == "gestartet") {
         checkSystemVersion();

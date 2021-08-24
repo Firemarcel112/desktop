@@ -1,6 +1,6 @@
 const apps = {
-    "system": "/../desktop/system/",
-    "apps": "/../desktop/app/",
+    "system": "/../system/v1/systemapps/",
+    "apps": "/../system/v1/app/",
 
     "settings": "settings",
     "browser": "browser",

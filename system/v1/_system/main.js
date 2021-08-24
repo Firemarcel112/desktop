@@ -99,8 +99,8 @@ function menuAppInstalled() {
 function isBrowserInstalled() {
     if(localStorage.getItem("browser") !== "installiert") {
         document.querySelector("body").style.display = "none";
-        alert("Du hast die App nicht installiert, gehe in den App Store!")
-        window.location = "/../desktop";
+        alert("Du hast die App nicht installiert, gehe in den App Store!");
+        window.location = "/../system/v1/desktop";
     } else {}
 
 }
@@ -108,6 +108,7 @@ function isBrowserInstalled() {
 function isAppNumberInstalled() {
     if(localStorage.getItem("app_number") !== "installiert") {
         document.querySelector("body").style.display = "none";
-        alert("Du hast die App nicht installiert, gehe in den App Store")
+        alert("Du hast die App nicht installiert, gehe in den App Store");
+        window.location = "/../system/v1/desktop";
     } else {};
 }
