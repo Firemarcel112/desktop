@@ -78,6 +78,7 @@ function checkIsSystemValid() {
         sessionStorage.removeItem("angemeldet");
         window.location = "/../"
     }
+    return;
 }
 
 function isLoggedIn() {
