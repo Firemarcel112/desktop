@@ -70,10 +70,14 @@ function deleteProfile() {
 
     if(check) {
         alert("Dein Profil wurde gelöscht");
-        localStorage.clear();
+        localStorage.removeItem("username");
+        localStorage.removeItem("password");
+        localStorage.removeItem("hintergrundbild");
+        localStorage.removeItem("profilbild");
+        localStorage.removeItem("registriert");
         const angemeldet = "false";
         sessionStorage.setItem("angemeldet" , angemeldet)
-        window.location = "/../"
+        window.location = "/../system/v1/lockscreen/"
     } else {
         alert("Vorgang Abgebrochen");
     }
@@ -82,20 +86,31 @@ function deleteProfile() {
 function changeColor() {
 
     const newColor = document.querySelector("#newColor").value;
-    localStorage.setItem("appColor" , newColor);
+    localStorage.setItem("SYS_CONFIG_AppColor" , newColor);
+    window.location.reload();
+}
+
+function changeColorReset() {
+    localStorage.removeItem("SYS_CONFIG_AppColor");
+    alert("Appfarben zurückgesetzt")
+    window.location.reload();
+}
+
+function changeTaskbarColor() {
+    const newColor = document.querySelector("#taskColor").value;
+    localStorage.setItem("SYS_CONFIG_TaskBarColor" , newColor);
+    window.location.reload();
+
+}
+
+function changeTaskIconColor() {
+    const newColor = document.querySelector("#taskIconColor").value;
+    localStorage.setItem("SYS_CONFIG_TaskIconColor" , newColor);
     window.location.reload();
 }
 
 function backToWelcome() {
-
-    const allgemeines = document.querySelector("#allgemeines");
-    allgemeines.style.display = "none";
-
-    const installed = document.querySelector("#installed");
-    installed.style.display = "none";
-
-    const welcome = document.querySelector("#welcome");
-    welcome.style.display = "unset";
+    window.location = "/../system/v1/systemapps/settings"
 }
 
 function saveNotice() {
@@ -103,32 +118,6 @@ function saveNotice() {
     localStorage.setItem("notices" , notizen);
     notizen.innerHTML = localStorage.getItem("notizen");
     alert("Notizen gespeichert")
-}
-
-function openAllgemeines() {
-
-    const welcome = document.querySelector("#welcome");
-    welcome.style.display = "none";
-
-    const installed = document.querySelector("#installed");
-    installed.style.display = "none";
-
-
-    const allgemeines = document.querySelector("#allgemeines");
-    allgemeines.style.display = "unset";
-}
-
-function openApps() {
-
-    const welcome = document.querySelector("#welcome");
-    welcome.style.display = "none";
-
-    const allgemeines = document.querySelector("#allgemeines");
-    allgemeines.style.display = "none";
-
-    const installed = document.querySelector("#installed");
-    installed.style.display = "unset";
-
 }
 
 function isInstalled() {

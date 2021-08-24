@@ -126,7 +126,7 @@ input {
     display: none;
 }
 
-#shutdown {
+.shutdown {
     position: absolute;
     top: 1040px;
     left: 0px;
@@ -134,11 +134,11 @@ input {
     color: white;
 }
 
-#shutdown:hover {
+.shutdown:hover {
     color: red;
 }
 
-#shutdown #toggle{
+.shutdown #toggle{
     position: absolute;
     background-color: rgb(0, 0, 0);
     top: -20px;
@@ -148,7 +148,7 @@ input {
     font-family: Helvetica;
 }
 
-#shutdown:hover > #toggle {
+.shutdown:hover > #toggle {
     display: unset;
 }
 

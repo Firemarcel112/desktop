@@ -1,7 +1,6 @@
 @import "/../system/v1/_system/app_design.css";
 
 /* SIDEBAR */
-
 #sidebar {
     position: absolute;
     top: 55.4px;
@@ -47,29 +46,37 @@ a {
     top: 30px;
 }
 
-/**/
+/* ENDE SIDEBAR */
 
-#welcome {
-    margin: 0 auto;
-    display: block;
+/*TEXT*/
+#changeBenutzer, 
+#changePassword, 
+#changeBackground, 
+#changeProfilbild,
+#deleteProfile, 
+.color_change {
+    font-size: 25px;
+    color: white;
+    display: inline;
+    margin-bottom: 20px;
+    line-height: 1.8 !important;
 }
 
-#welcome img {
-    display: block;
-    margin: 0 auto;
-    border-radius: 50%;
-    width: 460px;
-    height: 460px;
+/*INPUTS*/
+#newname, 
+#newpassword, 
+#newBackground, 
+#newProfilbild {
+    cursor: text;
+    background-color: white;
+    color: black;
+    width: 400px;
 }
 
-#welcome #name {
-    text-align: center;
+#deleteprofile:hover {
+    background-color: red !important;
 }
 
-#welcome #notizen {
-    text-align: left !important;
-    display: block;
-    margin: 0 auto;
-    width: 1200px;
-    height: 300px;
+input {
+    margin-bottom: 10px;
 }

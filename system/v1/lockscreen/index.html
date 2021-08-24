@@ -21,7 +21,7 @@
             <input onclick="login()" id="submit" type="submit" value="Anmelden">
             <p id="errormessage"></p>
             <p onclick="forgotPassword()" id="newPasswort">PASSWORT VERGESSEN</p>
-            <i id="shutdown" onclick="shutdownSystem()" class="fas fa-power-off"><span id="toggle">Herunterfahren</span></i>
+            <i onclick="shutdownSystem()" class="fas fa-power-off , shutdown"><span id="toggle">Herunterfahren</span></i>
             <p class="loader"></p>
             <p id="anmeldennachricht">Willkommen Benutzer!</p>
         </div>
@@ -33,6 +33,7 @@
             <input id="image_link" type="url" placeholder="Profilbild festlegen(URL)">
             <p id="errormessage_register"></p>
             <input onclick="register()" id="submit" type="submit" value="Registrieren">
+            <i onclick="shutdownSystem()" class="fas fa-power-off , shutdown"><span id="toggle">Herunterfahren</span></i>
         </div>
 
         <div id="forgot" class="container">
@@ -43,6 +44,7 @@
             <p onclick="backToLockscreen()" id="back">Zürück</p>
             <p id="error"><p>
             <input onclick="newPassword()" id="submit" type="submit" value="Bestätigen">
+            <i onclick="shutdownSystem()" class="fas fa-power-off , shutdown"><span id="toggle">Herunterfahren</span></i>
         </div>
         <footer>
             <p id="date"></p>

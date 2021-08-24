@@ -60,7 +60,7 @@ function loginGUI() {
     document.querySelector("#submit").style.display = "none";
     document.querySelector("#errormessage").style.display = "none";
     document.querySelector("#newPasswort").style.display = "none";
-    document.querySelector("#shutdown").style.display = "none";
+    document.querySelector(".shutdown").style.display = "none";
 
     document.querySelector(".loader").style.display = "block";
     document.querySelector("#anmeldennachricht").style.display = "block";

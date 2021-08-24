@@ -18,7 +18,7 @@ footer {
 
 #start:hover {
     transition: .4s;
-    color:rgb(72, 72, 255);
+    color:rgb(114, 114, 255) !important;
 }
 
 #startooltip {

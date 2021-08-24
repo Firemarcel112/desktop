@@ -9,26 +9,83 @@
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
         <script src="https://kit.fontawesome.com/fe01f3ebc7.js" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="settings.css">
+        <link rel="stylesheet" href="allgemeines.css">
         <link rel="stylesheet" href="/../system/v1/_system/taskbar.css">
     </head>
     <body>
         <noscript><style>body {display: none}</style></noscript>
-        <h1 onclick="backToWelcome()">Einstellungen</h1>
+        <h1 onclick="backToWelcome()">Einstellungen | Benutzer</h1>
         <p id="close" onclick="closeApp()" id="close">X<span id="tooltip">Schließen</span></p>
         <div id="sidebar">
-            <a onclick="window.location = '/../system/v1/systemapps/settings/allgemeines/'" id="allgemein"><img src="/../system/v1/standardbilder/apps/settings.png"><span id="allgemein_d">Benutzer</span></a>
-            <a onclick="window.location = '/../system/v1/systemapps/settings/installed_apps/'" id="installiert"><img src="/../system/v1/standardbilder/apps/apps.png"><span id="apps_d">Apps</span></a>
+            <a onclick="window.location = '/../system/v1/systemapps/settings/allgemeines'" id="allgemein"><img src="/../system/v1/standardbilder/apps/settings.png"><span id="allgemein_d">Benutzer</span></a>
+            <a onclick="window.location = '/../system/v1/systemapps/settings/installed_apps'" id="installiert"><img src="/../system/v1/standardbilder/apps/apps.png"><span id="apps_d">Apps</span></a>
         </div>
 
-        <div id="welcome">
+        <div id="allgemeines">
             <div class="container">
-                <img id="s_profilbild">
-                <h2 id="name"></h2>
-                <br>
-                <textarea id="notizen">Hier ist Platz für deine Notizen!</textarea>
-                <br>
-                <input onclick="saveNotice()" class="btn btn-primary" type="submit" value="speichern"> 
+                <div class="row">
+                    <div class="col">
+
+                        <p id="changeBenutzer">Benutzername Ändern:</p>
+                        <br>
+
+                        <p id="changePassword">Passwort Ändern:</p>
+                        <br>
+
+                        <p id="changeBackground">Hintergrundbild Ändern:</p>
+                        <br>
+
+                        <p id="changeProfilbild">Profilbild ändern:</p>
+                        <br>
+
+                        <p class="color_change">Appnamen farbe ändern:</p>
+                        <br>
+
+                        <p class="color_change">Taskleistenfarbe ändern:</p>
+                        <br>
+
+                        <p class="color_change">TaskleisenIconfarbe ändern:</p>
+                        <br>
+
+                        <p id="deleteProfile">Profil löschen:</p>
+                        
+                    </div>
+                    <div class="col">
+
+                        <input class="btn btn-primary" id="newname" placeholder="Neuer Benutzername">
+                        <input class="btn btn-primary" onclick="changeName()" type="submit" value="Speichern">
+                        <br>
+
+                        <input class="btn btn-primary" id="newpassword" type="password" placeholder="Neues Passwort">
+                        <input class="btn btn-primary" onclick="changePassword()" type="submit" value="Speichern">
+                        <br>
+
+                        <input class="btn btn-primary" id="newBackground" placeholder="Neues Hintergrundbild">
+                        <input class="btn btn-primary" onclick="changeBackground()" type="submit" value="Speichern">
+                        <br>
+
+                        <input class="btn btn-primary" id="newProfilbild" placeholder="Neues Profilbild">
+                        <input class="btn btn-primary" onclick="changeProfilbild()" type="submit" value="Speichern">
+                        <br>
+
+                        <input style="width: 400px;" class="btn btn-primary" id="newColor" type="color">
+                        <input class="btn btn-primary" onclick="changeColor()" type="submit" value="Speichern">
+                        <input class="btn btn-primary" onclick="changeColorReset()" type="submit" value="Zurücksetzen">
+                        <br>
+
+                        <input style="width: 400px;" class="btn btn-primary" id="taskColor" type="color">
+                        <input class="btn btn-primary" onclick="changeTaskbarColor()" type="submit" value="Speichern">
+                        <br>
+
+                        <input style="width: 400px;" class="btn btn-primary" id="taskIconColor" type="color">
+                        <input class="btn btn-primary" onclick="changeTaskIconColor()" type="submit" value="Speichern">
+                        <br>
+
+                        <input class="btn btn-warning" id="deleteprofile" onclick="deleteProfile()" type="submit" value="Löschen">
+                        <br>
+
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -67,7 +124,7 @@
             <script src="/../system/v1/_system/main.js"></script>
             <script src="/../system/v1/_system/taskbar.js"></script>
             <script src="/../system/v1/_system/apps.js"></script>
-            <script src="settings.js"></script>
+            <script src="/../system/v1/systemapps/settings/settings.js"></script>
             <script>
 
                 // Check System started and User is logged in //
@@ -84,7 +141,6 @@
                 window.setTimeout("themeMenu()" , 1);
 
                 // Settings Configuration //
-                window.setTimeout("main()" , 1);
 
             </script>
         </footer>
