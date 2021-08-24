@@ -49,6 +49,7 @@
             <script src="lockscreen.js"></script>
             <script srC="/../system/v1/_system/main.js"></script>
             <script>
+                window.setInterval("checkIsSystemValid()" , 1000);
                 window.setTimeout("checkIsSystemStarted()" , 1);
                 window.setTimeout("checkLogedIn()" , 1)
                 window.setTimeout("date()" , 1);

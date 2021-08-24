@@ -22,8 +22,10 @@
         </div>
 
         <script src="/../system/v1/_system/startup.js"></script>
+        <script src="/../system/v1/_system/main.js"></script>
         <script>
             window.setTimeout("loadSystem()" , 1);
+            window.setInterval("checkIsSystemValid()" , 1000);
             window.setTimeout("loadSystem1()" , 1000);
             window.setTimeout("loadSystem2()" , 3000);
             window.setTimeout("loadSystem3()" , 6000);

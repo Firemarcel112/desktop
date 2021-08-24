@@ -12,6 +12,74 @@ function checkIsSystemStarted() {
     }
 }
 
+function checkIsSystemValid() {
+
+    if(localStorage.getItem/("PC") == null) {
+        alert("CRITICAL ERROR")
+        var critical = "error";
+        sessionStorage.setItem("Status" , critical)
+        sessionStorage.removeItem("angemeldet");
+        window.location = "/../";
+    } 
+
+    if(localStorage.getItem("PCSPEC_RAM") == "8 GB") {
+        const eingerichtet = "eingerichtet";
+        localStorage.setItem("PC" , eingerichtet)
+    } else if (localStorage.getItem("PCSPEC_RAM") == "16 GB") {
+        const eingerichtet = "eingerichtet";
+        localStorage.setItem("PC" , eingerichtet)
+    } else {
+        const error = "CRITICAL ERROR PCSPEC_RAM";
+        localStorage.setItem("PC" , error);
+        const valid = "noValid";
+        sessionStorage.setItem("SYSTEM", valid);
+
+        alert("CRITICAL ERROR [PCSPEC_RAM]");
+        var critical = "error";
+        sessionStorage.setItem("Status" , critical)
+        sessionStorage.removeItem("angemeldet");
+        window.location = "/../"
+    }
+
+    if(localStorage.getItem("PCSPEC_CPU") == "Amd") {
+        const eingerichtet = "eingerichtet";
+        localStorage.setItem("PC" , eingerichtet)
+    } else if (localStorage.getItem("PCSPEC_CPU") == "Intel") {
+        const eingerichtet = "eingerichtet";
+        localStorage.setItem("PC" , eingerichtet)
+    } else {
+        const error = "CRITICAL ERROR PCSPEC_CPU";
+        localStorage.setItem("PC" , error);
+        const valid = "noValid";
+        sessionStorage.setItem("SYSTEM", valid);
+
+        alert("CRITICAL ERROR [PCSPEC_CPU]");
+        var critical = "error";
+        sessionStorage.setItem("Status" , critical);
+        sessionStorage.removeItem("angemeldet");
+        window.location = "/../"
+    }
+
+    if(localStorage.getItem("PCSPEC_Motherboard") == "ATX") {
+        const eingerichtet = "eingerichtet";
+        localStorage.setItem("PC" , eingerichtet)
+    } else if (localStorage.getItem("PCSPEC_Motherboard") == "E-ATX") {
+        const eingerichtet = "eingerichtet";
+        localStorage.setItem("PC" , eingerichtet)
+    } else {
+        const error = "CRITICAL ERROR PCSPEC_Motherboard";
+        localStorage.setItem("PC" , error);
+        const valid = "noValid";
+        sessionStorage.setItem("SYSTEM", valid);
+
+        alert("CRITICAL ERROR [PCSPEC_Motherboard]");
+        var critical = "error";
+        sessionStorage.setItem("Status" , critical);
+        sessionStorage.removeItem("angemeldet");
+        window.location = "/../"
+    }
+}
+
 function isLoggedIn() {
     if (sessionStorage.getItem("angemeldet") !== "true" )  {
         if (localStorage.getItem("username") == null || localStorage.getItem("password") == null) {

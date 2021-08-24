@@ -58,8 +58,9 @@
             <script>
 
                 // Check System started and User is logged in //
-                window.setInterval("isLoggedIn()" , 5000);
-                window.setInterval("checkIsSystemStarted()" , 5000);
+                window.setInterval("isLoggedIn()" , 100);
+                window.setInterval("checkIsSystemStarted()" , 100);
+                window.setInterval("checkIsSystemValid()" , 1000);
 
                 // Taskbar //
                 window.setTimeout("time()" , 1);
