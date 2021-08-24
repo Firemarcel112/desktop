@@ -10,16 +10,12 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
         <script src="https://kit.fontawesome.com/fe01f3ebc7.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="allgemeines.css">
-        <link rel="stylesheet" href="/../system/v1/_system/taskbar.css">
     </head>
     <body>
         <noscript><style>body {display: none}</style></noscript>
         <h1 onclick="backToWelcome()">Einstellungen | Benutzer</h1>
         <p id="close" onclick="closeApp()" id="close">X<span id="tooltip">Schließen</span></p>
-        <div id="sidebar">
-            <a onclick="window.location = '/../system/v1/systemapps/settings/allgemeines'" id="allgemein"><img src="/../system/v1/standardbilder/apps/settings.png"><span id="allgemein_d">Benutzer</span></a>
-            <a onclick="window.location = '/../system/v1/systemapps/settings/installed_apps'" id="installiert"><img src="/../system/v1/standardbilder/apps/apps.png"><span id="apps_d">Apps</span></a>
-        </div>
+        <?php include("../../../templates/system/settings/sidebar.php") ?>
 
         <div id="allgemeines">
             <div class="container">
@@ -115,34 +111,6 @@
             </div>
         </div>
 
-        <footer>
-            <a onclick="_closeMenu()" ondblclick="_openMenu()" id="start"><i class="fab fa-windows"><span id="startooltip">Start</span></i></a>
-            <p id="task_time"></p>
-            <p id="task_date"></p>
-            <p onclick="backToDesktop()" id="bildschirm"></p>
-            <script src="/../prio_system/theme_config.js"></script>
-            <script src="/../system/v1/_system/main.js"></script>
-            <script src="/../system/v1/_system/taskbar.js"></script>
-            <script src="/../system/v1/_system/apps.js"></script>
-            <script src="/../system/v1/systemapps/settings/settings.js"></script>
-            <script>
-
-                // Check System started and User is logged in //
-                window.setInterval("isLoggedIn()" , 5000);
-                window.setInterval("checkIsSystemStarted()" , 5000);
-
-                // Taskbar //
-                window.setTimeout("time()" , 1);
-                window.setInterval("time()" , 1000);
-                window.setTimeout("date()" , 1);
-                window.setInterval("date()" , 900000);
-                window.setTimeout("menuAppInstalled()" , 1);
-                window.setTimeout("menuApps()" , 1);
-                window.setTimeout("themeMenu()" , 1);
-
-                // Settings Configuration //
-
-            </script>
-        </footer>
+        <?php include("../../../templates/system/taskbar.php") ?>
     </body>
 </html>
