@@ -1,4 +1,3 @@
-
 function checkLogedIn() {
     if(localStorage.getItem("username") == null || localStorage.getItem("password") == null) {
 
@@ -9,9 +8,7 @@ function checkLogedIn() {
         forgot_form.style.display = "none";
 
         const register_form = document.querySelector("#register");
-        var profilbild = document.querySelector("#lockimage_r");
         register_form.style.display = "unset";
-        profilbild.src = "/../standardbilder/profilbild.jpg";
 
          // Hinweise New Register //
         alert("Du besitz keinen Account, bitte erstelle dir einen!");
@@ -42,7 +39,7 @@ function login() {
         alert("Hallo " + localStorage.getItem("username"));
         const angemeldet = "true";
         sessionStorage.setItem("angemeldet" , angemeldet)
-        window.location = "/desktop/";
+        window.location = "/../system/v1/desktop/";
     } else {
         errormessage = document.querySelector("#errormessage");
         errormessage.innerHTML = "Dein Passwort ist Falsch!"
@@ -80,7 +77,7 @@ function newPassword() {
     } else {
         if(newPassword == validPassword) {
             localStorage.setItem("password" , newPassword)
-            window.location = "/../";
+            window.location = "/../system/v1/lockscreen";
         }
     }   
 }
@@ -109,7 +106,7 @@ function register() {
     localStorage.setItem("password" , password);
     localStorage.setItem("profilbild" , profilbild);
     localStorage.setItem("hintergrundbild", hintergrundibild);
-    window.location = "/../"
+    window.location = "/../system/v1/lockscreen"
 }
 
 function date() {
@@ -125,7 +122,7 @@ function date() {
 }
 
 function backToLockscreen() {
-    window.location = "/../";
+    window.location = "/../system/v1/lockscreen";
 }
 
 function seePassword() {

@@ -10,16 +10,33 @@ footer {
 #start {
     position: relative;
     top: -2px;
+    font-size: 40px;
+    left: 5px;
+    color: white;
 }
 
-#start img {
-    margin: 0;
-    padding: 0;
-    height: 50px;
-}
 
 #start:hover {
-    opacity: 0.5;
+    transition: .4s;
+    color:rgb(72, 72, 255);
+}
+
+#startooltip {
+    display: none;
+    position: absolute;
+    font-size: 20px;
+    top: 18px;
+    left: 45px;
+    background-color: white;
+    height: 20px;
+    line-height: 0;
+    padding: 8px;
+    color: black;
+    font-style: Helvetica !important;
+}
+
+#start i:hover > #startooltip {
+    display: inherit;
 }
 
 
@@ -29,13 +46,13 @@ footer p {
 
 footer #task_time {
     position: relative;
-    top: -5px;
+    top: -15px;
     left: 1770px;
 }
 
 footer #task_date {
     position: relative;
-    top: 10px;
+    top: 0px;
     left: 1700px;
 }
 
@@ -117,6 +134,26 @@ a {
 }
 
 #abmelden:hover {
+    color: red;
+}
+
+#shutdown {
+    position: relative;
+    color: white;
+    top: 478px;
+    bottom: 0px;
+    margin-bottom: 0px;
+    line-height: 0;
+    font-family: Helvetica;
+    left: -74px;
+    cursor: pointer;
+}
+
+#shutdown i {
+    font-size: 20px;
+}
+
+#shutdown:hover {
     color: red;
 }
 

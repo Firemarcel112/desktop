@@ -1,0 +1,19 @@
+body {
+    background-color: black !important;
+    font-family: Helvetica;
+}
+
+#configurator {
+    position: relative;
+    color: white;
+    text-align: center;
+    top: 50px;
+}
+
+#startup {
+    display: none;
+    position: relative;
+    color: white;
+    text-align: center;
+    top: 50px;
+}
