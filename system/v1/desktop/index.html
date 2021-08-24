@@ -96,6 +96,12 @@
                     backgroundImage.style.background = `url("/../system/v1/standardbilder/wallpaper_desktop.jpg")`
                 } else {
                 backgroundImage.style.background = `url('${localStorage.getItem("hintergrundbild")}')`
+                if(localStorage.getItem("hintergrundbild") == null) {
+                    alert("Hintergrundbild nicht verfügbar - Standardbild wird geladen")
+                    const noImage = "noImage";
+                    localStorage.setItem("hintergrundbild" , noImage)
+                    window.location.reload()
+                }
                 }
             </script>
         </footer>

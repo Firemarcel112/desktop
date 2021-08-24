@@ -1,5 +1,6 @@
 body {
     background-color: rgb(77, 77, 255);
+    background: url("/../system/v1/standardbilder/wallpaper_desktop.jpg");
     background-repeat: repeat-y !important;
     max-width: 1903px;
     background-size: 1920px , 1080px !important;
@@ -15,6 +16,7 @@ a {
 .appimg {
     width: 90px;
     height: 80px;
+    padding: 5px 10px 0 5px;
     user-select: none;
 }
 
@@ -25,15 +27,23 @@ a {
 }
 
 .app_hover:hover {
-    border: 1px solid rgb(72, 72, 255);
+    transition: .3s;
+    border: 2px solid rgb(72, 72, 255);
+    background-color: rgb(72, 72, 255);
 }
 
 .app_desc {
-    font-size: 14px;
+    font-size: 13px;
     width: 90px;
     height: auto;
     text-align: center;
     color: black;
     text-shadow: 1px 1px;
     line-height: 1;
+}
+
+
+#app_browser_ ,
+#app_number_ {
+    display: none;
 }
