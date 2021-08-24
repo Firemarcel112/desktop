@@ -1,5 +1,3 @@
-@import "/../system/v1/_system/app_design.css";
-
 /* SIDEBAR */
 #sidebar {
     position: absolute;
@@ -32,7 +30,7 @@ a {
 
 #allgemein:hover > #allgemein_d {
     display: inherit;
-    left: 3px;
+    left: 13px;
 }
 
 #installiert:hover > #apps_d {
@@ -47,36 +45,3 @@ a {
 }
 
 /* ENDE SIDEBAR */
-
-/*TEXT*/
-#changeBenutzer, 
-#changePassword, 
-#changeBackground, 
-#changeProfilbild,
-#deleteProfile, 
-.color_change {
-    font-size: 25px;
-    color: white;
-    display: inline;
-    margin-bottom: 20px;
-    line-height: 1.8 !important;
-}
-
-/*INPUTS*/
-#newname, 
-#newpassword, 
-#newBackground, 
-#newProfilbild {
-    cursor: text;
-    background-color: white;
-    color: black;
-    width: 400px;
-}
-
-#deleteprofile:hover {
-    background-color: red !important;
-}
-
-input {
-    margin-bottom: 10px;
-}

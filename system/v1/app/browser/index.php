@@ -13,9 +13,7 @@
         <link rel="stylesheet" href="/../system/v1/_system/taskbar.css">
     </head>
     <body>
-        <noscript><style>body {display: none}</style></noscript>
-        <h1 onclick="backToWelcome()">Browser</h1>
-        <p id="close" onclick="closeApp()" id="close">X<span id="tooltip">Schließen</span></p>
+        <?php include("../../templates/apps/fenster.php") ?>
 
         <iframe controls="true" src="https://www.m-j-logistik.de"></iframe>
         
@@ -23,6 +21,9 @@
         <?php include("../../templates/system/taskbar.php") ?>
         <script>
             window.setTimeout("isBrowserInstalled()" , 1);
+
+            //  Fenstername //
+            h1.innerHTML = "Browser"
         </script>
     </body>
 </html>

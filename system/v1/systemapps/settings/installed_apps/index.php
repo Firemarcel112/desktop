@@ -12,9 +12,7 @@
         <link rel="stylesheet" href="installed.css">
     </head>
     <body>
-        <noscript><style>body {display: none}</style></noscript>
-        <h1 onclick="backToWelcome()">Einstellungen | Installierte Apps</h1>
-        <p id="close" onclick="closeApp()" id="close">X<span id="tooltip">Schließen</span></p>
+        <?php include("../../../templates/apps/fenster.php") ?>
         <?php include("../../../templates/system/settings/sidebar.php") ?>
 
         <div id="installed">
@@ -47,6 +45,9 @@
         <script>
             // Settings Configuration //
             window.setTimeout("isInstalled()" , 1);
+
+            //  Fenstername //
+            h1.innerHTML = "Einstellungen | Installierte Apps"
         </script>
     </body>
 </html>

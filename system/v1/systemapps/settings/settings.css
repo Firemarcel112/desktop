@@ -1,53 +1,5 @@
 @import "/../system/v1/_system/app_design.css";
-
-/* SIDEBAR */
-
-#sidebar {
-    position: absolute;
-    top: 55.4px;
-    height: 980px;
-    background-color: rgb(38, 84, 235);
-    width: 80px;
-}
-
-a {
-    color: white;
-}
-
-
-#sidebar img {
-    width: 50px;
-    display: block;
-    margin: 0 auto;
-    cursor: pointer;
-}
-
-
-#sidebar span {
-    display: none;
-    text-align: center;
-    position: absolute;
-    font-size: 14px;
-    margin-bottom: 0px !important;
-}
-
-#allgemein:hover > #allgemein_d {
-    display: inherit;
-    left: 3px;
-}
-
-#installiert:hover > #apps_d {
-    position: relative;
-    display: inherit;
-    left: 20px;
-}
-
-#installiert {
-    position: relative;
-    top: 30px;
-}
-
-/**/
+@import "/../system/v1/systemapps/settings/sidebar.css";
 
 #welcome {
     margin: 0 auto;

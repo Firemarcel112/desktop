@@ -1,3 +1,4 @@
+const h1 = document.querySelector("h1");
 function checkIsSystemStarted() {
     if(sessionStorage.getItem("Status") !== "gestartet") {
         alert("Dein Computer ist nicht eingeschaltet!")
