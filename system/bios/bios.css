@@ -1,0 +1,43 @@
+body {
+    background-color: rgb(0, 17, 255) !important;
+}
+
+h2 {
+    color: green;
+}
+
+.container {
+    font-weight: bolder;
+    position: relative;
+    border: 2px solid black;
+    height: 900px;
+    width: 1000px !important;
+    top: 20px;
+}
+
+.container p {
+    font-size: 20px;
+    text-align: center;
+}
+
+.first {
+    border-right: 2px solid black;
+    height: 898px;
+}
+
+.container .col input {
+    margin: 0 auto;
+    margin-top: 20px;
+    background-color: rgb(0, 17, 255);
+    text-align: center;
+    border: none;
+    font-weight: bolder;
+    display: block;
+}
+
+.btn-secondary {
+    position: relative;
+    left: 360px;
+    margin-right: 10px !important;
+    display: inline-block !important;
+}

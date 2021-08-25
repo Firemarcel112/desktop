@@ -1,4 +1,5 @@
 const message = document.querySelector("#message");
+
 function loadSystem() {
     message.innerHTML = "System Startet"
 }
@@ -19,4 +20,8 @@ function loadSystem4() {
     window.location = "/../system/v1/lockscreen/"
     const started = "gestartet";
     sessionStorage.setItem("Status" , started);
+}
+
+function startBIOS() {
+    window.location = "/../system/bios"
 }

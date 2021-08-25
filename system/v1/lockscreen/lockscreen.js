@@ -50,10 +50,6 @@ function login() {
     }
 }
 
-function weiterleitung() {
-    window.location = "/../system/v1/desktop";
-}
-
 function loginGUI() {
     document.querySelector("#login_username").style.display = "none";
     document.querySelector("#password").style.display = "none";
@@ -66,6 +62,11 @@ function loginGUI() {
     document.querySelector("#anmeldennachricht").style.display = "block";
     document.querySelector("#anmeldennachricht").innerHTML = "Willkommen " + localStorage.getItem("username");
     window.setTimeout("weiterleitung()" , 100);
+}
+
+
+function weiterleitung() {
+    window.location = "/../system/v1/desktop";
 }
 
 function forgotPassword() {
@@ -107,7 +108,7 @@ function newPassword() {
 function register() {
     const password = document.querySelector("#password_new").value;
     const name = document.querySelector("#username_new").value;
-    const profilbild = document.querySelector("#image_link").value;
+    let profilbild = document.querySelector("#image_link").value;
     const hintergrundibild = "noImage";
     const user = "registriert";
 
@@ -121,6 +122,10 @@ function register() {
         const errormessage = document.querySelector("#errormessage_register");
         errormessage.innerHTML = "Bitte wähle ein Gültiges Passwort";
         return;
+    }
+
+    if(profilbild == "") {
+        profilbild = "/../system/v1/standardbilder/profilbild.jpg"
     }
 
     localStorage.setItem("registriert" , user)

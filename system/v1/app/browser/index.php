@@ -15,7 +15,7 @@
     <body>
         <?php include("../../templates/apps/fenster.php") ?>
 
-        <iframe controls="true" src="http://project.m-j-logistik.de/"></iframe>
+        <iframe controls="true" src="https://de.wikipedia.org/wiki/Wikipedia:Hauptseite"></iframe>
         <input onclick="closeSuchleiste()" id="close_url" class="btn btn-primary" type="submit" value="suchleiste schließen">
         <input onclick="openSuchleiste()" id="open_url" class="btn btn-primary" type="submit" value="suchleiste öffnen">
         <div id="suchleiste">

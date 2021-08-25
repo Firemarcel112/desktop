@@ -44,11 +44,22 @@ function deleteProfile() {
 
     if(check) {
         alert("Dein Profil wurde gelöscht");
+        // Delete User //
         localStorage.removeItem("username");
         localStorage.removeItem("password");
+        localStorage.removeItem("registriert");
+
+        // Delete User Configs //
         localStorage.removeItem("hintergrundbild");
         localStorage.removeItem("profilbild");
-        localStorage.removeItem("registriert");
+        localStorage.removeItem("SYS_CONFIG_AppColor");
+        localStorage.removeItem("SYS_CONFIG_TaskBarColor");
+        localStorage.removeItem("SYS_CONFIG_TaskIconColor");
+
+        // Delete installed Apps //
+        localStorage.removeItem("app_browser");
+        localStorage.removeItem("app_number");
+
         const angemeldet = "false";
         sessionStorage.setItem("angemeldet" , angemeldet)
         window.location = "/../system/v1/lockscreen/"
@@ -144,7 +155,7 @@ function saveNotice() {
 }
 
 function isInstalled() {
-    if(localStorage.getItem("browser") == "installiert") {
+    if(localStorage.getItem("app_browser") == "installiert") {
         const browser = document.querySelector("#browser");
         const uninstall = document.querySelector("#uninstall_browser");
 
@@ -163,13 +174,13 @@ function isInstalled() {
 }
 
 function uninstallBrowser() {
-    if(localStorage.getItem("browser") !== "installiert") {
+    if(localStorage.getItem("app_browser") !== "installiert") {
         alert("Fehler aufgetreten!");
         window.location.reload();
     } else {
         const check = confirm("Möchtest du die App Browser wirklich deinstallieren?");
         if(check) {
-            localStorage.removeItem("browser");
+            localStorage.removeItem("app_browser");
             alert("App Browser wurde erfolgreich deinstalliert!")
             window.location.reload()
         } else {

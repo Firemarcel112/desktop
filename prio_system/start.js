@@ -84,6 +84,34 @@ function checkSystemVersion() {
     }
 }
 
+function checkSystemVersionAfterBIOSleave() {
+
+    if(localStorage.getItem("PC") == "eingerichtet") {
+        window.location.reload();
+    }
+
+    if(localStorage.getItem("PC") == "CRITICAL ERROR PCSPEC_RAM" || "CRITICAL ERROR PCSPEC_CPU" || "CRITICAL ERROR PCSPEC_Motherboard") {
+        alert(localStorage.getItem("PC"))
+    }
+
+    if(sessionStorage.getItem("BIOS_LEAVE") == "true") {
+        if(localStorage.getItem("SYSTEM_VERSION") == "V1") {
+            if(sessionStorage.getItem("SYSTEM") == "SystemIsValid") {
+                window.location = "/../system/v1/startup";
+                sessionStorage.removeItem("BIOS_LEAVE");
+            } else {
+                return alert("Kritischer Fehler endeckt");
+            }
+        } else {
+            const version = "V1";
+            localStorage.setItem("SYSTEM_VERSION" , version);
+            sessionStorage.removeItem("BIOS_LEAVE");
+            alert("SYSTEM_VERSION ist nicht vorhanden ; System wird Zurückgesezt auf (V1)") 
+            return window.location.reload()
+        }
+    }
+}
+
 function informationMessage() {
         
     const message = document.querySelector("#hinweis");
@@ -94,5 +122,13 @@ function isSystemStarted() {
 
     if(sessionStorage.getItem("Status") == "gestartet") {
         checkSystemVersion();
+    }
+}
+
+function hasLeaveBIOS() {
+
+    if(sessionStorage.getItem("BIOS_LEAVE") == "true") {
+        document.querySelector("#start").style.display = "none";
+        window.setTimeout("checkSystemVersionAfterBIOSleave()" , 700);
     }
 }

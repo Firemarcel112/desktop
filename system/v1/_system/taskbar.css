@@ -129,6 +129,7 @@ a {
 
 #abmelden {
     position: relative;
+    z-index: 10000;
     color: white;
     top: 478px;
     bottom: 0px;
@@ -145,6 +146,7 @@ a {
 
 #shutdown {
     position: relative;
+    z-index: 10000;
     color: white;
     top: 478px;
     bottom: 0px;

@@ -40,6 +40,7 @@
         window.setTimeout("isLoggedIn()" , 1);
         window.setTimeout("checkIsSystemStarted()" , 1);
         window.setInterval("checkIsSystemValid()" , 1000);
+        window.setInterval("isValidAccount()" , 100);
 
         // Taskbar //
         window.setTimeout("time()" , 1);

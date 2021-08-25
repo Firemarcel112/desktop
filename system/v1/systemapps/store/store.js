@@ -1,9 +1,9 @@
 function installBrowser() {
-    if(localStorage.getItem("browser") == "installiert") {
+    if(localStorage.getItem("app_browser") == "installiert") {
         return;
     } else {
         const installed = "installiert";
-        localStorage.setItem("browser" , installed);
+        localStorage.setItem("app_browser" , installed);
         alert("App: Browser erfolgreich installiert")
         window.location.reload();
     }
@@ -21,7 +21,7 @@ function installNumber() {
 }
 
 function isInstalled() {
-    if(localStorage.getItem("browser") == "installiert") {
+    if(localStorage.getItem("app_browser") == "installiert") {
         const browser = document.querySelector("#browser");
         const b_install = document.querySelector("#install_browser");
         browser.style.display = "none";

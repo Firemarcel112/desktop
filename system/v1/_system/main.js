@@ -1,4 +1,5 @@
 const h1 = document.querySelector("h1");
+
 function checkIsSystemStarted() {
     if(sessionStorage.getItem("Status") !== "gestartet") {
         alert("Dein Computer ist nicht eingeschaltet!")
@@ -87,7 +88,7 @@ function isLoggedIn() {
         if (localStorage.getItem("username") == null || localStorage.getItem("password") == null) {
             var bildschirm = document.querySelector("body");
             bildschirm.style.display = "none";
-            alert("Du besitzt keinen Accountm bitte erstelle dir einen");
+            alert("Du besitzt keinen Account bitte erstelle dir einen");
             window.location = "/../"
         } else {
             var bildschirm = document.querySelector("body");
@@ -103,6 +104,12 @@ function isLoggedIn() {
     }
 }
 
+function isValidAccount() {
+    if(localStorage.getItem("username") == null || localStorage.getItem("password") == null) {
+        alert("SYSTEM_USER_ERROR");
+        window.location = "/../system/v1/lockscreen";
+    }
+} 
 
 function shutdownSystem() {
     const check = confirm("PC wirklich ausschalten?")
@@ -138,7 +145,7 @@ function closeApp() {
 
 function appInstalled() {
 
-    if(localStorage.getItem("browser") !== "installiert") {
+    if(localStorage.getItem("app_browser") !== "installiert") {
         document.querySelector("#app_browser_").style.display = "none";
     } else {
         document.querySelector("#app_browser_").style.display = "block";
@@ -153,7 +160,7 @@ function appInstalled() {
 
 function menuAppInstalled() {
 
-    if(localStorage.getItem("browser") !== "installiert") {
+    if(localStorage.getItem("app_browser") !== "installiert") {
         document.querySelector("#menu_browser_").style.display = "none";
     } else {
         document.querySelector("#menu_browser_").style.display = "block";
@@ -167,7 +174,7 @@ function menuAppInstalled() {
 }
 
 function isBrowserInstalled() {
-    if(localStorage.getItem("browser") !== "installiert") {
+    if(localStorage.getItem("app_browser") !== "installiert") {
         document.querySelector("body").style.display = "none";
         alert("Du hast die App nicht installiert, gehe in den App Store!");
         window.location = "/../system/v1/desktop";
