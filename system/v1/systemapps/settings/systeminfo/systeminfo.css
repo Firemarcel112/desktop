@@ -1,0 +1,23 @@
+@import "/../system/v1/_system/app_design.css";
+@import "/../system/v1/systemapps/settings/sidebar.css";
+
+#sysinfo h2 {
+    color: white;
+    font-weight: bolder;
+}
+
+#container_2 {
+    width: 500px !important;
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+#sysinfo p {
+    color: white;
+    font-size: 20px;
+}
+
+#_2 {
+    text-align: right;
+}

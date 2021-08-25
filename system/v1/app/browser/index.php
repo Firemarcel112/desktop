@@ -16,9 +16,16 @@
         <?php include("../../templates/apps/fenster.php") ?>
 
         <iframe controls="true" src="https://www.m-j-logistik.de"></iframe>
+        <input onclick="closeSuchleiste()" id="close_url" class="btn btn-primary" type="submit" value="suchleiste schließen">
+        <input onclick="openSuchleiste()" id="open_url" class="btn btn-primary" type="submit" value="suchleiste öffnen">
+        <div id="suchleiste">
+            <input id="user" type="url" placeholder="URL eingeben" value="http://www.url.de/">
+            <input onclick="searchURL()" type="submit" class="btn btn-secondary" value="öffnen">
+        </div>
         
 
         <?php include("../../templates/system/taskbar.php") ?>
+        <script src="browser.js"></script>
         <script>
             window.setTimeout("isBrowserInstalled()" , 1);
 

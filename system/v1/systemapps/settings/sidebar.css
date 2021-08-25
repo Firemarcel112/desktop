@@ -1,4 +1,3 @@
-/* SIDEBAR */
 #sidebar {
     position: absolute;
     top: 55.4px;
@@ -47,6 +46,12 @@ a {
     left: 13px;
 }
 
+#systeminfo {
+    position: absolute;
+    top: 350px;
+    left: 13px;
+}
+
 #pers_d {
     position: relative;
     top: 62px;
@@ -70,4 +75,7 @@ a {
     display: inherit;
 }
 
-/* ENDE SIDEBAR */
+#systeminfo:hover > #sys_d {
+    display: inherit;
+    left: -5px;
+}
