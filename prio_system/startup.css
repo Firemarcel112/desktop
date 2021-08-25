@@ -40,7 +40,7 @@ body {
     color: rgb(103, 103, 255);
 }
 
-#hinweis {
+.mes {
     margin-top: 10px; 
     font-size: 20px;
     color: white;

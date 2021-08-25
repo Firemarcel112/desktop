@@ -49,13 +49,15 @@
         <footer>
             <p id="date"></p>
             <script src="lockscreen.js"></script>
-            <script srC="/../system/v1/_system/main.js"></script>
+            <script src="/../system/v1/_system/main.js"></script>
             <script>
                 window.setInterval("checkIsSystemValid()" , 1000);
                 window.setTimeout("checkIsSystemStarted()" , 1);
                 window.setTimeout("checkLogedIn()" , 1)
                 window.setTimeout("date()" , 1);
-                window.setInterval("date()" , 1000)
+                window.setInterval("date()" , 1000);
+                window.setTimeout("isExistAccount()" , 1)
+                window.setInterval("isExistAccount()" , 2000)
             </script>
         </footer>
     </body>

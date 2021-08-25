@@ -12,9 +12,6 @@ function checkLogedIn() {
 
          // Hinweise New Register //
         alert("Du besitz keinen Account, bitte erstelle dir einen!");
-        alert("Die Hier angegeben Daten werden Lokal auf deinem PC gespeichert!")
-        alert("Für ein Optimales Erlebnis stelle deinen Browser in den Vollbildmodus (F11)")
-        alert("Unsterstützte Auflösung: 1920x1080");
     } else {
         const siteTitle = document.querySelector("title");
         const siteIcon = document.querySelector("#icon");
@@ -36,12 +33,30 @@ function checkLogedIn() {
     }
 }
 
+function isExistAccount() {
+
+    if(document.querySelector("#register").style.display == "unset") {
+        return;
+    } else {
+
+        if(localStorage.getItem("username") == null) {
+            alert("Username nicht vorhanden")
+            window.location.reload();
+        }
+    
+        if(localStorage.getItem("password") == null) {
+            alert("Password nicht vorhanden");
+            window.location.reload();
+        }
+    }
+}
+
 function login() {
     const password = document.querySelector("#password").value;
     if(password == localStorage.getItem("password")) {
         const angemeldet = "true";
         sessionStorage.setItem("angemeldet" , angemeldet)
-        // window.location = "/../system/v1/desktop/";
+        window.location = "/../system/v1/desktop/";
         loginGUI()
 
     } else {
@@ -149,7 +164,11 @@ function date() {
 }
 
 function backToLockscreen() {
-    window.location = "/../system/v1/lockscreen";
+    const forgot = document.querySelector("#forgot");
+    forgot.style.display = "none";
+
+    const login = document.querySelector("#login");
+    login.style.display = "block";
 }
 
 function seePassword() {

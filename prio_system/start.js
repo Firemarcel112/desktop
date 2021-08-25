@@ -79,7 +79,7 @@ function checkSystemVersion() {
             const version = "V1";
             localStorage.setItem("SYSTEM_VERSION" , version);
             informationMessage();
-            window.setInterval("checkSystemVersion()" , 3500);
+            window.setInterval("checkSystemVersion()" , 7500);
         }
     }
 }
@@ -116,6 +116,12 @@ function informationMessage() {
         
     const message = document.querySelector("#hinweis");
     message.innerHTML = "erster Start: Betriebssystem wird vorbereitet!<br>Bitte Warten!"
+
+    const message2 = document.querySelector("#hinweis2");
+    message2.innerHTML = "Für ein Optimales Erlebnis stelle deinen Browser in den Vollbildmodus [F11]";
+
+    const message3 = document.querySelector("#hinweis3");
+    message3.innerHTML = "Alle Daten werden im LocalStorage von deinem Browser gespeichert , nicht auf einem Server!"
 }
 
 function isSystemStarted() {
