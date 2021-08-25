@@ -14,6 +14,7 @@ a {
 
 #sidebar img {
     width: 50px;
+    height: 50px;
     display: block;
     margin: 0 auto;
     cursor: pointer;
@@ -28,20 +29,45 @@ a {
     margin-bottom: 0px !important;
 }
 
-#allgemein:hover > #allgemein_d {
-    display: inherit;
+#installiert {
+    position: absolute;
+    top: 78px;
     left: 13px;
+}
+
+#benutzer {
+    position: absolute;
+    top: 160px;
+    left: 13px;
+}
+
+#personalisierung {
+    position: absolute;
+    top: 240px;
+    left: 13px;
+}
+
+#pers_d {
+    position: relative;
+    top: 62px;
+} 
+
+#starts:hover > #start_d {
+    display: inherit;
+    left: 23px;
 }
 
 #installiert:hover > #apps_d {
     position: relative;
     display: inherit;
-    left: 20px;
 }
 
-#installiert {
-    position: relative;
-    top: 30px;
+#benutzer:hover > #allgemein_d {
+    display: inherit;
+}
+
+#personalisierung:hover > #pers_d {
+    display: inherit;
 }
 
 /* ENDE SIDEBAR */

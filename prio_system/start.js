@@ -1,4 +1,5 @@
 function system() {
+    
     const ram = document.querySelector("#RAM").value;
     const cpu = document.querySelector("#CPU").value;
     const motherboard = document.querySelector("#MOTHERBOARD").value;
@@ -12,6 +13,7 @@ function system() {
 }
 
 function checkIsSystemValidFirst() {
+
     if(localStorage.getItem("PC")) {
 
         if(localStorage.getItem("PCSPEC_RAM") == "8 GB") {
@@ -89,6 +91,7 @@ function checkSystemVersion() {
 }
 
 function informationMessage() {
+
     if(localStorage.getItem("SYSTEM_VERSION") == "V1") {
         const message = document.querySelector("#hinweis");
         message.style.display = "none"
@@ -96,6 +99,7 @@ function informationMessage() {
 }
 
 function isSystemStarted() {
+
     if(sessionStorage.getItem("Status") == "gestartet") {
         checkSystemVersion();
     }

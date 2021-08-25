@@ -13,7 +13,29 @@ body {
 #startup {
     display: none;
     position: relative;
-    color: white;
     text-align: center;
-    top: 50px;
+    top: 350px;
+}
+
+#start {
+    font-size: 150px !important;
+    color: rgb(255, 255, 255);
+}
+
+#tooltip {
+    font-size: 35px;
+    font-family: helvetica;
+    position: absolute;
+    top: 300px;
+    left: 830px;
+    display: none;
+}
+
+#start:hover > #tooltip {
+    display: block;
+}
+
+#start:hover {
+    transition: .4s;
+    color: rgb(103, 103, 255);
 }

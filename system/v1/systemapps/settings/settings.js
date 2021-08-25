@@ -37,32 +37,6 @@ function changePassword() {
 
 }
 
-function changeBackground() {
-
-    const newBackground = document.querySelector("#newBackground").value;
-
-    if(newBackground == "") {
-        alert("Bitte gebe einen Gültigen Link an!")
-    } else {
-        localStorage.setItem("hintergrundbild" , newBackground);
-    }
-
-    window.location.reload();
-}
-
-function changeProfilbild() {
-
-    const newProfilbild = document.querySelector("#newProfilbild").value;
-
-    if(newProfilbild == "") {
-        alert("Bitte gebe einen gültien Link an!")
-    } else {
-        localStorage.setItem("profilbild", newProfilbild);
-    }
-    
-    window.location.reload();
-    newProfilbild.value = " HEY";
-}
 
 function deleteProfile() {
 
@@ -81,6 +55,46 @@ function deleteProfile() {
     } else {
         alert("Vorgang Abgebrochen");
     }
+}
+
+function changeBackground() {
+
+    const newBackground = document.querySelector("#newBackground").value;
+
+    if(newBackground == "") {
+        alert("Bitte gebe einen Gültigen Link an!")
+    } else {
+        localStorage.setItem("hintergrundbild" , newBackground);
+    }
+
+    window.location.reload();
+}
+
+function changeBackgroundReset() {
+    
+    alert("Hintergrund zurückgesetzt!")
+    const newBackground = "noImage";
+    localStorage.setItem("hintergrundbild" , newBackground);
+
+}
+
+function changeProfilbild() {
+
+    const newProfilbild = document.querySelector("#newProfilbild").value;
+
+    if(newProfilbild == "") {
+        alert("Bitte gebe einen gültien Link an!")
+    } else {
+        localStorage.setItem("profilbild", newProfilbild);
+    }
+    
+    window.location.reload();
+}
+
+function changeProfilbildReset() {
+    alert("Profilbild zurückgesetzt");
+    const url = "/../system/v1/standardbilder/profilbild.jpg"
+    localStorage.setItem("profilbild" , url);
 }
 
 function changeColor() {
@@ -103,15 +117,24 @@ function changeTaskbarColor() {
 
 }
 
+function changeTaskbarColorReset() {
+    localStorage.removeItem("SYS_CONFIG_TaskBarColor")
+    alert("Taskbarfarbe zurückgesetzt");
+    window.location.reload()
+}
+
 function changeTaskIconColor() {
     const newColor = document.querySelector("#taskIconColor").value;
     localStorage.setItem("SYS_CONFIG_TaskIconColor" , newColor);
     window.location.reload();
 }
 
-function backToWelcome() {
-    window.location = "/../system/v1/systemapps/settings"
+function changeTaskIconColorReset() {
+    localStorage.removeItem("SYS_CONFIG_TaskIconColor")
+    alert("TaskleistenIconfarbe zurückgesetzt");
+    window.location.reload()
 }
+
 
 function saveNotice() {
     const notizen = document.querySelector("#notizen").value;
