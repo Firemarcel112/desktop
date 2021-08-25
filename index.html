@@ -40,7 +40,7 @@
     <div id="startup">
         <div class="container">
             <i id="start" onclick="window.setTimeout('checkSystemVersion()' , 400)" class="fa fa-power-off"><span id="tooltip">Pc einschalten</span></i>
-            <p id="hinweis">Hinweis: Beim ersten Start 2 mal Drücken!</p>
+            <p id="hinweis"></p>
         </div>
     </div>
     <script src="/../prio_system/start.js"></script>
@@ -48,8 +48,6 @@
         window.setTimeout("checkIsSystemValidFirst()", 1)
         window.setInterval("checkIsSystemValidFirst()" , 1000);
         window.setTimeout("isSystemStarted()" , 1);
-
-        window.setTimeout("informationMessage()" , 1);
     </script>
     </body>
  </html>

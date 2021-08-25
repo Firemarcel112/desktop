@@ -8,6 +8,23 @@ body {
     overflow-y: hidden;
 }
 
+.leiste {
+    position: absolute;
+    top: 30px;
+}
+
+.leiste2 {
+    position: absolute;
+    top: 31px;
+    left: 150px;
+}
+
+.leiste3 {
+    position: absolute;
+    top: 31px;
+    left: 280px;
+}
+
 
 a {
     text-decoration: none;

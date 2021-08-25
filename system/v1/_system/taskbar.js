@@ -26,11 +26,21 @@ function _openMenu() {
     const menu = document.querySelector("#menu");
     const username = document.querySelector("#username");
     profilbild.src = localStorage.getItem("profilbild"); 
+    username.innerHTML = localStorage.getItem("username");
     menu.style.display = "unset";
-    username.innerHTML = localStorage.getItem("username")
+
+    const start = document.querySelector("#start");
+    const start2 = document.querySelector("#start_2");
+    start.style.display = "none";
+    start2.style.display = "block";
 }
 
 function _closeMenu() {
     const menu = document.querySelector("#menu");
     menu.style.display = "none";
+
+    const start = document.querySelector("#start");
+    const start2 = document.querySelector("#start_2");
+    start.style.display = "block";
+    start2.style.display = "none";
 }

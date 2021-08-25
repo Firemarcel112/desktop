@@ -14,20 +14,32 @@
     <body>
         <noscript><style>body {display: none}</style></noscript>
 
-        <div onclick="o_settings()" class="app_hover">
-            <a id="systemapp_settings"><img class="appimg" src="/../system/v1/standardbilder/apps/settings.png"><p id="t_c" class="app_desc">Einstellungen</p></a>
+        <div class="leiste">
+
+            <div onclick="o_settings()" class="app_hover">
+                <a id="systemapp_settings"><img class="appimg" src="/../system/v1/standardbilder/apps/settings.png"><p id="t_c" class="app_desc">Einstellungen</p></a>
+            </div>
+
+            <div onclick="o_store()" class="app_hover">
+                <a id="systemapp_store"><img  class="appimg" src="/../system/v1/standardbilder/apps/app_store.png"><p id="t_c1" class="app_desc">App Store</p></a>
+            </div>
+
+            <div onclick="o_browser()" id="app_browser_" class="app_hover">
+                <a id="app_browser"><img  class="appimg" src="/../system/v1/standardbilder/apps/browser.png"><p id="t_c2" class="app_desc">Browser</p></a>
+            </div>
+
+            <div onclick="o_number()" id="app_number_" class="app_hover">
+                <a id="app_number"><img  class="appimg" src="/../system/v1/standardbilder/apps/app_guessmynumber.png"><p id="t_c3" class="app_desc">Nummer erraten</p></a>
+            </div>
+
         </div>
 
-        <div onclick="o_store()" class="app_hover">
-            <a id="systemapp_store"><img  class="appimg" src="/../system/v1/standardbilder/apps/app_store.png"><p id="t_c1" class="app_desc">App Store</p></a>
+        <div class="leiste2">
+
         </div>
 
-        <div onclick="o_browser()" id="app_browser_" class="app_hover">
-            <a id="app_browser"><img  class="appimg" src="/../system/v1/standardbilder/apps/browser.png"><p id="t_c2" class="app_desc">Browser</p></a>
-        </div>
-
-        <div onclick="o_number()" id="app_number_" class="app_hover">
-            <a id="app_number"><img  class="appimg" src="/../system/v1/standardbilder/apps/app_guessmynumber.png"><p id="t_c3" class="app_desc">Nummer erraten</p></a>
+        <div class="leiste3">
+            
         </div>
 
         <?php include("../templates/system/taskbar.php") ?>

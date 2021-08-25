@@ -39,3 +39,9 @@ body {
     transition: .4s;
     color: rgb(103, 103, 255);
 }
+
+#hinweis {
+    margin-top: 10px; 
+    font-size: 20px;
+    color: white;
+}

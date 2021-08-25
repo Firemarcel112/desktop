@@ -63,14 +63,6 @@ function checkIsSystemValidFirst() {
         config.style.display = "none";
         const start = document.querySelector("#startup");
         start.style.display = "unset";
-
-        const ram = document.querySelector("#ram");
-        const cpu = document.querySelector("#cpu");
-        const motherboard = document.querySelector("#motherboard");
-
-        ram.innerHTML = "RAM: " + localStorage.getItem("PCSPEC_RAM");
-        cpu.innerHTML = "CPU: "  + localStorage.getItem("PCSPEC_CPU");
-        motherboard.innerHTML = "Motherboard: " + localStorage.getItem("PCSPEC_Motherboard");
     } 
 }
 
@@ -86,16 +78,16 @@ function checkSystemVersion() {
         } else {
             const version = "V1";
             localStorage.setItem("SYSTEM_VERSION" , version);
+            informationMessage();
+            window.setInterval("checkSystemVersion()" , 3500);
         }
     }
 }
 
 function informationMessage() {
-
-    if(localStorage.getItem("SYSTEM_VERSION") == "V1") {
-        const message = document.querySelector("#hinweis");
-        message.style.display = "none"
-    }
+        
+    const message = document.querySelector("#hinweis");
+    message.innerHTML = "erster Start: Betriebssystem wird vorbereitet!<br>Bitte Warten!"
 }
 
 function isSystemStarted() {

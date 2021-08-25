@@ -24,6 +24,7 @@ function themeMenu() {
     [
         document.querySelector("footer"),
         document.querySelector("#start"),
+        document.querySelector("#start_2"),
         document.querySelector("#m_t_c"),
         document.querySelector("#m_t_c1"),
         document.querySelector("#m_t_c2"),
@@ -32,8 +33,9 @@ function themeMenu() {
 
     menu_apps[0].style.backgroundColor = theme.taskbarColor;
     menu_apps[1].style.color = theme.taskIconColor;
-    menu_apps[2].style.color = theme.appsColor;
+    menu_apps[2].style.color = theme.taskIconColor;
     menu_apps[3].style.color = theme.appsColor;
     menu_apps[4].style.color = theme.appsColor;
     menu_apps[5].style.color = theme.appsColor;
+    menu_apps[6].style.color = theme.appsColor;
 }

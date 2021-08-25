@@ -30,7 +30,7 @@
                     <p class="color_change">Taskleistenfarbe ändern:</p>
                     <br>
 
-                    <p class="color_change">TaskleisenIconfarbe ändern:</p>
+                    <p class="color_change">TaskleistenIconfarbe ändern:</p>
                     <br>
             </div>
             <div class="col">

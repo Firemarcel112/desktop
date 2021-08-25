@@ -20,12 +20,14 @@
         <div onclick="o_number()" id="menu_app_number_" class="m_app_hover">
             <a id="menu_number"><img  class="m_appimg" src="/../system/v1/standardbilder/apps/app_guessmynumber.png"><p id="m_t_c3" class="m_app_desc">Nummer erraten</p></a>
         </div>
+
     </div>
 </div>
 
 <footer>
     <link rel="stylesheet" href="/../system/v1/_system/taskbar.css">
-    <a onclick="_closeMenu()" ondblclick="_openMenu()" id="start"><i class="fab fa-windows"><span id="startooltip">Start</span></i></a>
+    <a class="start" id="start"><i onclick="_openMenu()" class="fab fa-windows"><span class="startooltip">Start</span></i></a>
+    <a onclick="_closeMenu()" class="start" id="start_2"><i class="fab fa-windows"><span class="startooltip">Start</span></i></a>
     <p id="task_time"></p>
     <p id="task_date"></p>
     <p onclick="backToDesktop()" id="bildschirm"></p>
