@@ -25,8 +25,10 @@ function saveSettings() {
 }
 
 function leaveBIOS() {
+
     let check = confirm("Möchtest du das BIOS wirklich verlassen? Alle ungespeicherten Änderungen gehen dabei verloren");
     if(check) {
+
         window.location = "/../";
 
         const leave = "true";
@@ -34,7 +36,17 @@ function leaveBIOS() {
     } else {
         return;
     }
+}
 
+function forceShutdown() {
+
+    let check = confirm("Möchtest du dein System wirklich herunterfahren?")
+    if(check) {
+
+        window.location = "/../";
+    } else {
+        return;
+    }
 }
 
 function isSystemStarted() {
