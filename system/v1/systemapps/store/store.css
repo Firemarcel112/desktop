@@ -17,3 +17,13 @@
     top: 10px;
     margin-bottom: 50px;
 }
+
+.app {
+    display: none;
+    cursor: default;
+}
+
+#browser,
+#app_number {
+    color: white !important;
+}

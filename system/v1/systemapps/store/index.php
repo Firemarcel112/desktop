@@ -17,20 +17,20 @@
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <a id="browser"><img class="appimg" src="/../system/v1/standardbilder/apps/browser.png"><p class="app_desc">Browser</p></a>
+                    <a class="app" id="browser"><img class="appimg" src="/../system/v1/standardbilder/apps/browser.png"><p class="app_desc">Browser</p></a>
                 </div>
                 <div class="col">
-                    <input id="install_browser" onclick="installBrowser()" class="btn btn-primary" type="submit" value="Browser installieren">
+                    <input id="install_browser" onclick="installBrowser()" class="btn btn-primary , app" type="submit" value="Browser installieren">
                     <br>
                 </div>
             </div>
 
             <div class="row">
                 <div class="col">
-                    <a id="app_number"><img class="appimg" src="/../system/v1/standardbilder/apps/app_guessmynumber.png"><p class="app_desc">Nummer erraten</p></a>
+                    <a class="app" id="app_number"><img class="appimg" src="/../system/v1/standardbilder/apps/app_guessmynumber.png"><p class="app_desc">Nummer erraten</p></a>
                 </div>
                 <div class="col">
-                    <input id="install_number" onclick="installNumber()" class="btn btn-primary" type="submit" value="Nummer erraten installieren">
+                    <input id="install_number" onclick="installNumber()" class="btn btn-primary , app" type="submit" value="Nummer erraten installieren">
                     <br>
                 </div>
             </div>

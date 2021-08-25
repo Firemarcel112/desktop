@@ -26,6 +26,11 @@ function isInstalled() {
         const b_install = document.querySelector("#install_browser");
         browser.style.display = "none";
         b_install.style.display = "none";
+    } else {
+        const browser = document.querySelector("#browser");
+        const b_install = document.querySelector("#install_browser");
+        browser.style.display = "block";
+        b_install.style.display = "block";
     }
 
     if(localStorage.getItem("app_number") == "installiert") {
@@ -33,5 +38,10 @@ function isInstalled() {
         const an_install = document.querySelector("#install_number");
         app_number.style.display = "none";
         an_install.style.display = "none";
+    } else {
+        const app_number = document.querySelector("#app_number");
+        const an_install = document.querySelector("#install_number");
+        app_number.style.display = "block";
+        an_install.style.display = "block";
     }
 }
