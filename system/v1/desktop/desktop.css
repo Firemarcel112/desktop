@@ -24,6 +24,7 @@ a {
     width: 90px;
     height: 110px;
     margin: 20px 10px 10px 20px;
+    cursor: default;
 }
 
 .app_hover:hover {
