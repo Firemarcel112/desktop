@@ -20,7 +20,9 @@
                     <a class="app" id="browser"><img class="appimg" src="/../system/v1/standardbilder/apps/browser.png"><p class="app_desc">Browser</p></a>
                 </div>
                 <div class="col">
-                    <input id="install_browser" onclick="installBrowser()" class="btn btn-primary , app" type="submit" value="Browser installieren">
+                    <input id="install_browser" onclick="installerBrowser()" class="btn btn-primary , app" type="submit" value="Browser installieren">
+                    <p id="installer_browser" class="isloading">Wird heruntergeladen: </p>
+                    <div id="installer_browser2" class="loading"></div>
                     <br>
                 </div>
             </div>
@@ -30,7 +32,9 @@
                     <a class="app" id="app_number"><img class="appimg" src="/../system/v1/standardbilder/apps/app_guessmynumber.png"><p class="app_desc">Nummer erraten</p></a>
                 </div>
                 <div class="col">
-                    <input id="install_number" onclick="installNumber()" class="btn btn-primary , app" type="submit" value="Nummer erraten installieren">
+                    <input id="install_number" onclick="installerNumber()" class="btn btn-primary , app" type="submit" value="Nummer erraten installieren">
+                    <p id="installer_number" class="isloading">Wird heruntergeladen: </p>
+                    <div id="installer_number2" class="loading"></div>
                     <br>
                 </div>
             </div>

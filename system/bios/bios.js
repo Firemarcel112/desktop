@@ -11,10 +11,9 @@ function saveSettings() {
         localStorage.setItem("PCSPEC_RAM" , ram);
         localStorage.setItem("SYSTEM_VERSION" , version);
         
-        var will_leave = confirm("Mächtest du das BIOS verlassen?");
+        var will_leave = confirm("Möchtest du das BIOS verlassen?");
         if(will_leave) {
             window.location = "/../";
-            alert("DEBUG Save Settings");
             const leave = "true";
             sessionStorage.setItem("BIOS_LEAVE" , leave);
         } else {
