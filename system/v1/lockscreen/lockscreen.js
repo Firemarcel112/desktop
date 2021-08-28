@@ -1,3 +1,19 @@
+// KEY EVENTS //
+
+var event_login = document.querySelector("#password");
+
+event_login.addEventListener("keyup" , function(event) {
+    if(event.keyCode === 13) {
+        login();
+    }
+});
+
+/////////////
+
+
+
+
+
 function checkLogedIn() {
     if (localStorage.getItem("username") == null || localStorage.getItem("password") == null) {
 
@@ -52,7 +68,9 @@ function isExistAccount() {
 }
 
 function login() {
-    const password = document.querySelector("#password").value;
+
+    var password = document.querySelector("#password").value;
+
     if (password == localStorage.getItem("password")) {
         const angemeldet = "true";
         sessionStorage.setItem("angemeldet", angemeldet)
