@@ -123,14 +123,13 @@ function shutdownSystem() {
 function logoff() {
     const check = confirm("Willst du dich wirklich abmelden")
     if(check) {
-        alert("Du hast dich erfolgreich abgemeldet");
-        const abgemeldet = "false";
-        sessionStorage.setItem("angemeldet" , abgemeldet);
+        const leave = true;
+        sessionStorage.setItem("leave" , leave);
     } else {
         return;
     }
     const abmelden = document.querySelector("#abmelden");
-    abmelden.href = "/../system/v1/lockscreen"
+    abmelden.href = "/../system/v1/desktop/abmelden"
 }
 
 function backToDesktop() {
