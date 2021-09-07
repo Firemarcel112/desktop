@@ -1,3 +1,9 @@
+window.onload = function appOpen() {
+    const x = "true";
+    window.sessionStorage.setItem("APP_settings_open" , x);
+}
+
+
 function main() {
 
     const username = document.querySelector("#name");

@@ -2,6 +2,8 @@ body {
     background-color: rgb(78, 78, 78) !important;
     max-width: 1903px;
     max-height: 1080px;
+    height: 1080px;
+    width: 1903px;
     overflow-y: hidden;
     overflow-x: hidden;
 }

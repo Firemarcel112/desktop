@@ -3,6 +3,8 @@ body {
     background: url("/../system/v1/standardbilder/wallpaper_desktop.jpg");
     background-repeat: repeat-y !important;
     max-width: 1903px;
+    width: 1903px;
+    height: 1080px;
     background-size: 1920px , 1080px !important;
     max-height: 1080px;
     overflow-y: hidden;

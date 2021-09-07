@@ -1,4 +1,4 @@
-<div id="menu">
+<div id="menu" style="display: none;">
     <img id="profilbild">
     <p id="username"></p>
     <a onclick="logoff()" id="abmelden">Abmelden</a>

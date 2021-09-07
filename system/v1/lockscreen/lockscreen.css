@@ -117,6 +117,7 @@ input {
 .fa-eye , .fa-eye-slash {
     position: absolute;
     top: 568px;
+    z-index: 10000;
     left: 1085px;
     font-size: 30px;
     cursor: pointer;

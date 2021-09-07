@@ -2,19 +2,8 @@ const h1 = document.querySelector("h1");
 
 /// ALLGEMEINE KEY CODES //
 
-var all = document.querySelector("body");
 
-all.onmouseover = function() {
-    document.onkeydown = function(event) {
-        var event = event || window.event;
-        var key = event.keyCode || event.which || event.code;
-        if(key === 88) {
-            alert("HELLO");
-        }
-    };
-}
 ///
-
 
 function checkIsSystemStarted() {
     if(sessionStorage.getItem("Status") !== "gestartet") {
@@ -154,6 +143,7 @@ function backToDesktop() {
 
 function closeApp() {
     window.location = "/../system/v1/desktop";
+
 }
 
 // Installed Apps // 
