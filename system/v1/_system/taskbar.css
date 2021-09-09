@@ -13,10 +13,12 @@ footer {
     font-size: 40px;
     left: 5px;
     color: white;
+    z-index: 1000;
 }
 
 #start_2 {
     display: none;
+    z-index: 1000;
 }
 
 
@@ -30,10 +32,11 @@ footer {
     font-size: 20px;
     top: 18px;
     left: 45px;
-    background-color: white;
+    background-color: none;
     height: 20px;
     line-height: 0;
     padding: 8px;
+    box-sizing: content-box;
     color: black;
     font-style: Helvetica !important;
 }

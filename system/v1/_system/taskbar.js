@@ -27,7 +27,7 @@ function _openMenu() {
     const profilbild = document.querySelector("#profilbild");
     const menu = document.querySelector("#menu");
     const username = document.querySelector("#username");
-    profilbild.src = localStorage.getItem("profilbild"); 
+    profilbild.src = localStorage.getItem("profilbild");
     username.innerHTML = localStorage.getItem("username");
     menu.style.display = "unset";
 
@@ -54,19 +54,19 @@ document.onclick = function _menuclose() {
     _closeMenu();
 }
 
-document.addEventListener("keydown" , function(event) {
+document.addEventListener("keydown", function (event) {
     const menubar = document.querySelector("#menu");
 
-    if(event.keyCode == 18) {
+    if (event.keyCode == 18) {
 
-        if(menubar.style.display == "none"){
+        if (menubar.style.display == "none") {
             _openMenu();
-        } else if(menubar.style.display == "unset") {
+        } else if (menubar.style.display == "unset") {
             _closeMenu();
         };
     }
 
-    if(event.keyCode == 113) {
-        _openHelp();
-    }
+    // if(event.keyCode == 113) {
+    //     _openHelp();
+    // }
 });

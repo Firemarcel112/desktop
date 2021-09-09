@@ -2,13 +2,13 @@
 
 var event_login = document.querySelector("#password");
 
-event_login.addEventListener("keyup" , function(event) {
-    if(event.keyCode === 13) {
+event_login.addEventListener("keyup", function (event) {
+    if (event.keyCode === 13) {
         login();
     }
 });
 
-/////////////
+// End Key Events on Lockscreen //
 
 
 
