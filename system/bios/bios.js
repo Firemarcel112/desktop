@@ -1,21 +1,21 @@
 function saveSettings() {
     let check = confirm("Möchtest du die Einstellungen wirklich speichern?");
-    if(check) {
+    if (check) {
         const cpu = document.querySelector("#cpu").value;
         const motherboard = document.querySelector("#motherboard").value;
         const ram = document.querySelector("#ram").value;
         const version = document.querySelector("#version").value;
 
-        localStorage.setItem("PCSPEC_CPU" , cpu);
-        localStorage.setItem("PCSPEC_Motherboard" , motherboard);
-        localStorage.setItem("PCSPEC_RAM" , ram);
-        localStorage.setItem("SYSTEM_VERSION" , version);
-        
+        localStorage.setItem("PCSPEC_CPU", cpu);
+        localStorage.setItem("PCSPEC_Motherboard", motherboard);
+        localStorage.setItem("PCSPEC_RAM", ram);
+        localStorage.setItem("SYSTEM_VERSION", version);
+
         var will_leave = confirm("Möchtest du das BIOS verlassen?");
-        if(will_leave) {
+        if (will_leave) {
             window.location = "/../";
             const leave = "true";
-            sessionStorage.setItem("BIOS_LEAVE" , leave);
+            sessionStorage.setItem("BIOS_LEAVE", leave);
         } else {
             return;
         }
@@ -26,12 +26,12 @@ function saveSettings() {
 function leaveBIOS() {
 
     let check = confirm("Möchtest du das BIOS wirklich verlassen? Alle ungespeicherten Änderungen gehen dabei verloren");
-    if(check) {
+    if (check) {
 
         window.location = "/../";
 
         const leave = "true";
-        sessionStorage.setItem("BIOS_LEAVE" , leave);
+        sessionStorage.setItem("BIOS_LEAVE", leave);
     } else {
         return;
     }
@@ -40,7 +40,7 @@ function leaveBIOS() {
 function forceShutdown() {
 
     let check = confirm("Möchtest du dein System wirklich herunterfahren?")
-    if(check) {
+    if (check) {
 
         window.location = "/../";
     } else {
@@ -50,9 +50,9 @@ function forceShutdown() {
 
 function isSystemStarted() {
 
-    if(sessionStorage.getItem("Status") == "gestartet") {
+    if (sessionStorage.getItem("Status") == "gestartet") {
         alert("Du kanst nicht im eingeschalteten Betrieb auf das BIOS zugreifen");
-        return window.location = "/../"
+        return window.location = "/../";
     }
 }
 
@@ -87,5 +87,5 @@ function addTime() {
     const seconds = time.getSeconds();
     const fullseconds = ((seconds < 10) ? "0" : "");
 
-    zeit.innerHTML = fullh + hour + ":" + fullm + minutes + ":" + fullseconds + seconds; 
+    zeit.innerHTML = fullh + hour + ":" + fullm + minutes + ":" + fullseconds + seconds;
 }
